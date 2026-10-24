@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.vercel/
+.env*
+__pycache__/
+# EPİAŞ oturum bileti (TGT): kimlik bilgisi, depoya girmemeli
+.eptr2-tgt

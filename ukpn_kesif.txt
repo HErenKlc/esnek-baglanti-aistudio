@@ -1,0 +1,847 @@
+﻿=== UKPN veri setleri (k²s²nt²/esneklik ile ilgili) ===
+  ukpn-33kv-circuit-operational-data-monthly  ù  33kV Circuit Operational Data Monthly
+  ukpn-appendix-g  ù  Appendix G Detail
+  ukpn-appendix-g-project-progression  ù  Appendix G
+  ukpn-appendix-g-site-specific-conditions  ù  Appendix G Site Specific Conditions
+  ukpn-capacity-heatmap  ù  Long Term Development Statement (LTDS) Capacity Heatmap
+  ukpn-connections-reform-local-authority  ù  Connections Reform Outcome Aggregated by Local Authority
+  ukpn-constraint-breaches-history  ù  Constraint Breaches History
+  ukpn-constraints-real-time-meter-readings  ù  Constraints Real Time Meter Readings
+  ukpn-curtailment-events-site-specific  ù  Curtailment Events Site Specific
+  ukpn-data-centre-demand-profiles  ù  Data Centre Demand Profiles
+  ukpn-dfes-network-headroom-report  ù  Distribution Future Energy Scenarios Network Scenario Headroom Report (DFES NSHR)
+  ukpn-dnoa  ù  Distribution Network Options Assessment
+  ukpn-ehv-network-outages  ù  EHV Network Outages
+  ukpn-embedded-capacity-register  ù  Embedded Capacity Register 2 - 1MW and above
+  ukpn-embedded-capacity-register-1-under-1mw  ù  Embedded Capacity Register 1 - under 1MW
+  ukpn-flexibility-dispatches  ù  Flexibility Dispatches
+  ukpn-flexibility-tender-data  ù  Flexibility Tender Data by Postcode
+  ukpn-hv-flex-zones  ù  High Voltage Flexibility Zones by Tender Round
+  ukpn-low-voltage-dnoa  ù  Low Voltage Distribution Network Options Assessment
+  ukpn-ltds-cim  ù  Long Term Development Statement - Common Information Model (CIM)
+  ukpn-ltds-table-1-circuit-data  ù  Long Term Development Statement (LTDS) Table 1 Circuit data
+  ukpn-ltds-table-2b-transformer-data-3w  ù  Long Term Development Statement (LTDS) Table 2b Transformer Data - 3W
+  ukpn-ltds-table-4a-3ph-fault-level  ù  Long Term Development Statement (LTDS) Table 4a Fault level data - 3 phase
+  ukpn-ltds-table-5-generation  ù  Long Term Development Statement (LTDS) Table 5 Generation
+  ukpn-ltds-table-7-operational-restrictions  ù  Long Term Development Statement (LTDS) Table 7 Operational Restrictions
+  ukpn-lv-flex-zones  ù  Low Voltage Flexibility Zones by Tender Round
+  ukpn-modification-application  ù  Longest Demand Modification Application Lead Timesáat Grid Supply Points
+  ukpn-network-losses  ù  Network Losses
+  ukpn-optimise-prime  ù  Project Optimise Prime - Commercial Electric Vehicles Trial
+  ukpn-overall-queue-insights  ù  UK Power Networks Overall Queue Insights
+  ukpn-power-quality  ù  Power Quality
+  ukpn-sensitivity-factors-export  ù  Sensitivity Factors (Export)
+  ukpn-sensitivity-factors-import  ù  Sensitivity Factors (Import)
+  ukpn-standard-profiles-electricity-demand  ù  Standard Profiles UK Power Networks Uses for Electricity Demand
+  ukpn-standard-technology-profiles-generation  ù  Standard Profiles UK Power Networks Uses for Electricity Generation
+  ukpn-wide-planning-status  ù  UK Power Networks' Pipeline Allocation
+  ukpn_primary_postcode_area  ù  UK Power Networks Primary Substation Distribution Areas
+  ukpn_secondary_postcode_area  ù  UK Power Networks Secondary Substation Distribution Areas
+
+=== ukpn-33kv-circuit-operational-data-monthly ===
+alanlar:
+  - timestamp (datetime) timestamp
+  - licence_area (text) licence_area
+  - grid_supply_point (text) grid_supply_point
+  - category (text) category
+  - feeder_description (text) feeder_description
+  - ltds_line_name (text) ltds_line_name
+  - from_ltds_node (text) from_ltds_node
+  - to_ltds_node (text) to_ltds_node
+  - redacted (text) redacted
+  - nominal_voltage (int) nominal_voltage
+  - active_power_month_min_mw (double) active_power_month_min_mw
+  - active_power_month_mean_mw (double) active_power_month_mean_mw
+  - active_power_month_max_mw (double) active_power_month_max_mw
+  - active_power_month_p95_mw (double) active_power_month_p95_mw
+  - active_power_month_p90_mw (double) active_power_month_p90_mw
+  - active_power_month_p50_mw (double) active_power_month_p50_mw
+  - active_power_month_p10_mw (double) active_power_month_p10_mw
+  - active_power_month_p05_mw (double) active_power_month_p05_mw
+  - current_month_min_amps (double) current_month_min_amps
+  - current_month_mean_amps (double) current_month_mean_amps
+  - current_month_max_amps (double) current_month_max_amps
+  - current_month_p95_amps (double) current_month_p95_amps
+  - current_month_p90_amps (double) current_month_p90_amps
+  - current_month_p50_amps (double) current_month_p50_amps
+  - current_month_p10_amps (double) current_month_p10_amps
+  - current_month_p05_amps (double) current_month_p05_amps
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-appendix-g ===
+alanlar:
+  - gsp (text) Grid Supply Point
+  - unique_nodd_id (text) Unique NODD ID
+  - site_name (text) Site Name
+  - connection_status (text) Connection Status
+  - technology (text) Technology
+  - developer_capacity_mw (double) Developer Capacity (MW)
+  - date_of_connection (text) Date of Connection
+  - date_of_non_firm_accelerated_connection (text) Date of Non-firm / Accelerated Connection
+  - contract_status (text) Contract Status
+  - type_of_contract (text) Type of contract
+  - previously_offered_new_gsp (text) Previously offered new GSP?
+  - position (int) Position
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-appendix-g-project-progression ===
+alanlar:
+  - gsp (text) gsp
+  - date_of_last_signed_bca_containing_app_g (text) Date of Last Signed BCA containing App G
+  - last_project_progression_submission (text) Last Project Progression submission
+  - clock_start_date (text) Clock start date
+  - cancellation_charges_apply (text) Cancellation Charges Apply
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-appendix-g-site-specific-conditions ===
+alanlar:
+  - gsp (text) gsp
+  - emergency_instructions (text) Emergency Instructions
+  - voltage_regulation_at_the_grid_supply_point (text) Voltage Regulation at the Grid Supply Point
+  - transmission_system_to_active_network_management_scheme (text) Transmission System to Active Network Management Scheme
+  - operational_visibility_and_commercial_control (text) Operational Visibility and Commercial Control
+  - sgt_reverse_power_flow_control_scheme (text) SGT Reverse Power Flow Control Scheme
+  - sgt_flexible_forward_power_flow_control_scheme (text) SGT Flexible Forward Power Flow Control Scheme
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-capacity-heatmap ===
+alanlar:
+  - name (text) name
+  - mrid (text) mRID
+  - description (text) description
+  - type (text) type
+  - area (text) area
+  - bsp (text) BSP
+  - gsp (text) GSP
+  - latitude (double) latitude
+  - longitude (double) longitude
+  - voltages (double) Voltages
+  - demandavailablecapacity (double) demandAvailableCapacity
+  - demandconstraint (text) demandConstraint
+  - demandconstraintlimitingfactor (text) demandConstraintLimitingFactor
+  - demandfirmcapacity (double) demandFirmCapacity
+  - demandmaximum (double) demandMaximum
+  - demandminimum (double) demandMinimum
+  - generationavailablecapacity (double) generationAvailableCapacity
+  - generationbudgetestimatesprovidedcapacity (double) generationBudgetEstimatesProvidedCapacity
+  - generationbudgetestimatesprovidedcount (int) generationBudgetEstimatesProvidedCount
+  - generationconnectionoffersacceptedcapacity (double) generationConnectionOffersAcceptedCapacity
+  - generationconnectionoffersacceptedcount (int) generationConnectionOffersAcceptedCount
+  - generationconnectionoffersmadecapacity (double) generationConnectionOffersMadeCapacity
+  - generationconnectionoffersmadecount (int) generationConnectionOffersMadeCount
+  - generationconstraint (text) generationConstraint
+  - generationconstraintlimitingfactor (text) generationConstraintLimitingFactor
+  - generationfirmcapacity (double) generationFirmCapacity
+  - loadbudgetestimatesprovidedcapacity (double) loadBudgetEstimatesProvidedCapacity
+  - loadbudgetestimatesprovidedcount (int) loadBudgetEstimatesProvidedCount
+  - loadconnectionoffersacceptedcapacity (double) loadConnectionOffersAcceptedCapacity
+  - loadconnectionoffersacceptedcount (int) loadConnectionOffersAcceptedCount
+  - loadconnectionoffersmadecapacity (double) loadConnectionOffersMadeCapacity
+  - loadconnectionoffersmadecount (int) loadConnectionOffersMadeCount
+  - voltage (double) voltage
+  - reversepowerflowavailablecapacity (double) reversePowerFlowAvailableCapacity
+  - reversepowerflowtotalcapacity (double) reversePowerFlowTotalCapacity
+  - geometry_wkt_epsg4326 (geo_shape) geometry_wkt_epsg4326
+  - geo_point_2d (geo_point_2d) geo_point_2d
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-connections-reform-local-authority ===
+sat²r say²s²: 133
+alanlar:
+  - name (text) Name
+  - geo_point (geo_point_2d) Geo Point
+  - code (text) Code
+  - eligible_export_capacity_for_connections_reform_mw (double) Eligible export capacity for Connections Reform (MW)
+  - export_capacity_now_in_the_transmission_queue_mw (double) Export capacity now in the transmission queue (MW)
+  - connected_export_capacity_mw (double) Connected export capacity (MW)
+  - renewables_and_storage_export_capacity_mw_connected_and_contracted (double) Renewables and Storage Export Capacity (MW) - Connected and contracted
+  - category_renewables_and_storage_export_capacity_mw_connected_and_contracted (text) Category Renewables and Storage Export Capacity (MW) - Connected and contracted
+  - geo_shape (geo_shape) Geo Shape
+÷rnek sat²rlar:
+  {"name": "Mid Suffolk", "geo_point": {"lon": 1.092569377, "lat": 52.246868472}, "code": "E07000203", "eligible_export_capacity_for_connections_reform_mw": 357.40000000000003, "export_capacity_now_in_the_transmission_queue_mw": 262.40000000000003, "connected_export_capacity_mw": 148.91, "renewables_and_storage_export_capacity_mw_connected_and_contracted": 324.1, "category_renewables_and_storage_export_capacity_mw_connected_and_contracted": "300-399 MW", "geo_shape": {"type": "Feature", "geometry": {"coordinates": [[[[1.34983851804896, 52.4033208575488], [1.350302042369725, 52.40330501237232], [
+  {"name": "Mole Valley", "geo_point": {"lon": -0.325123195, "lat": 51.212317605}, "code": "E07000210", "eligible_export_capacity_for_connections_reform_mw": null, "export_capacity_now_in_the_transmission_queue_mw": null, "connected_export_capacity_mw": null, "renewables_and_storage_export_capacity_mw_connected_and_contracted": 168.20000000000002, "category_renewables_and_storage_export_capacity_mw_connected_and_contracted": "150-199 MW", "geo_shape": {"type": "Feature", "geometry": {"coordinates": [[[[-0.405150842046404, 51.10759080601715], [-0.406040606481133, 51.10744380684241], [-0.406133729
+  {"name": "Oxfordshire", "geo_point": {"lon": -0.96026211365927, "lat": 51.73281540073847}, "code": "E10000025", "eligible_export_capacity_for_connections_reform_mw": 0.0, "export_capacity_now_in_the_transmission_queue_mw": 0.0, "connected_export_capacity_mw": 9.0, "renewables_and_storage_export_capacity_mw_connected_and_contracted": 9.0, "category_renewables_and_storage_export_capacity_mw_connected_and_contracted": "0-49 MW", "geo_shape": {"type": "Feature", "geometry": {"coordinates": [[[[-0.880885700429523, 51.68076114840269], [-0.880965863141825, 51.68074702630311], [-0.881064845944376, 51.
+
+=== ukpn-constraint-breaches-history ===
+alanlar:
+  - scheme (text) scheme
+  - start_time_utc (datetime) start_time_utc
+  - end_time_utc (datetime) end_time_utc
+  - start_time_local (text) start_time_local
+  - end_time_local (text) end_time_local
+  - duration_hours (double) duration_hours
+  - total_der_access_reduction_kwh (double) total_der_access_reduction_kWh
+  - event_id (text) event_id
+  - constraint_id (text) constraint_id
+  - constraint_description (text) constraint_description
+  - constraint_voltage_kv (int) constraint_voltage_kV
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-constraints-real-time-meter-readings ===
+alanlar:
+  - timestamp (datetime) timestamp
+  - constraint_id (text) constraint_id
+  - present_amps_value (double) current_amps
+  - trim_amps (double) trim_limit_amps
+  - release_limit_amps (double) release_limit_amps
+  - breach_flag (text) breach_flag
+  - constraint_description (text) constraint_description
+  - der_name (text) der_name
+  - utilisation_percentage (double) utilisation_percentage
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-curtailment-events-site-specific ===
+alanlar:
+  - der_name (text) der_name
+  - event_id (text) event_id
+  - scheme (text) scheme_name
+  - start_time_utc (datetime) start_time_utc
+  - end_time_utc (datetime) end_time_utc
+  - start_time_local (datetime) start_time_local
+  - end_time_local (datetime) end_time_local
+  - duration_hours (double) duration_hours
+  - total_der_access_reduction_kwh (double) total_der_access_reduction_kWh
+  - average_access_reduction_kw (double) average_access_reduction_kW
+  - peak_access_reduction_kw (double) peak_access_reduction_kW
+  - estimated_energy_lost_kwh (double) estimated_energy_lost_kWh
+  - driver (text) driver
+  - public_flag (text) public_flag
+  - der_name_act (text) der_name_act
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-data-centre-demand-profiles ===
+alanlar:
+  - cleansed_voltage_level (text) cleansed_voltage_level
+  - anonymised_data_centre_name (text) anonymised_data_centre_name
+  - dc_type (text) dc_type
+  - local_timestamp (datetime) local_timestamp
+  - utc_timestamp (text) utc_timestamp
+  - hh_utilisation_ratio (double) hh_utilisation_ratio
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-dfes-network-headroom-report ===
+alanlar:
+  - category (text) Category
+  - substation_name (text) Substation Name
+  - voltage_kv (double) Voltage (kV)
+  - sitefunctionallocation (text) Site Functional Location
+  - bulksupplypoint (text) Bulk Supply Point
+  - gridsupplypoint (text) Grid Supply Point
+  - scenario (text) Scenario
+  - year (date) Year
+  - headroom_mw (double) Headroom (MW)
+  - licencearea (text) LicenceArea
+  - headroom_percent (double) Headroom (percent)
+  - demand_rag (text) Demand RAG
+  - physical_level (text) Physical Level
+  - spatial_coordinates (geo_point_2d) Spatial Coordinates
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-dnoa ===
+alanlar:
+  - substation_title (text) Substation Title
+  - functional_location (text) Functional Location
+  - area (text) Area
+  - postcode (text) Postcode
+  - constraint_description (text) Constraint description
+  - traditional_solution (text) Traditional solution
+  - constraint_season (text) Constraint season
+  - customers_served (double) Customers served
+  - dnoa_result (text) DNOA result
+  - dnoa_result_description (text) DNOA result description
+  - dnoa_result_history_2023 (text) DNOA result history 2023
+  - dnoa_result_history_2024 (text) DNOA result history 2024
+  - dnoa_result_history_2025 (text) DNOA result history 2025
+  - dnoa_result_history_2026 (text) DNOA result history 2026
+  - flexibility_procurement_2026_27 (text) Flexibility procurement 2026/27
+  - flexibility_procurement_2027_28 (text) Flexibility procurement 2027/28
+  - flexibility_procurement_2028_29 (text) Flexibility procurement 2028/29
+  - flexibility_procurement_2029_30 (text) Flexibility procurement 2029/30
+  - flexibility_procurement_2030_31 (text) Flexibility procurement 2030/31
+  - constraint_occurrence_year (date) Constraint occurrence year
+  - current_status (text) Current Status
+  - type (text) Type
+  - site (text) Site
+  - laep_status (text) LAEP status
+  - flexibility_revenue_range_ps_mw (text) Flexibility Revenue Range (ú/MW)
+  - spatial_coordinates (geo_point_2d) Spatial Coordinates
+  - local_authority (text) local_authority
+  - county (text) County Council
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-ehv-network-outages ===
+alanlar:
+  - outageid (int) OutageID
+  - circuitid (text) CircuitID
+  - substationname (text) SubstationName
+  - sitefunctionallocation (text) SiteFunctionalLocation
+  - startdate (date) StartDate
+  - starttime (text) StartTime
+  - enddate (date) EndDate
+  - endtime (text) EndTime
+  - outagetype (text) OutageType
+  - plantype (text) PlanType
+  - plannedstatus (text) PlannedStatus
+  - dno (text) DNO
+  - spatial_coordinates (geo_point_2d) Spatial Coordinates
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-embedded-capacity-register ===
+alanlar:
+  - export_mpan_msid (text) Export MPAN / MSID
+  - import_mpan_msid (text) Import MPAN / MSID
+  - customer_name (text) Customer Name
+  - customer_site (text) Customer Site
+  - address_line_1 (text) Address Line 1
+  - address_line_2 (text) Address Line 2
+  - town_city (text) Town/ City
+  - county (text) County
+  - postcode (text) Postcode
+  - country (text) Country
+  - location_x_coordinate_eastings_where_data_is_held (text) Location (x-coordinate):_Eastings (where data is held)
+  - location_y_coordinate_northings_where_data_is_held (text) Location (y-coordinate):_Northings (where data is held)
+  - grid_supply_point (text) Grid Supply Point
+  - bulk_supply_point (text) Bulk Supply Point
+  - primary (text) Primary
+  - point_of_connection_poc_voltage_kv (double) Point of Connection (POC)_Voltage (kV)
+  - licence_area (text) Licence Area
+  - energy_source_1 (text) Energy Source 1
+  - energy_conversion_technology_1 (text) Energy Conversion Technology 1
+  - chp_cogeneration_yes_no (text) CHP Cogeneration (Yes/No)
+  - storage_capacity_1_mwh (text) Storage Capacity 1 (MWh)
+  - storage_duration_1_hours (text) Storage Duration 1 (Hours)
+  - energy_source_energy_conversion_technology_1_registered_capacity_mw (double) Energy Source & Energy Conversion Technology 1 - Registered Capacity (MW)
+  - energy_source_2 (text) Energy Source 2
+  - energy_conversion_technology_2 (text) Energy Conversion Technology 2
+  - chp_cogeneration_2_yes_no (text) CHP Cogeneration 2 (Yes/No)
+  - storage_capacity_2_mwh (text) Storage Capacity 2 (MWh)
+  - storage_duration_2_hours (text) Storage Duration 2 (Hours)
+  - energy_source_energy_conversion_technology_2_registered_capacity_mw (text) Energy Source & Energy Conversion Technology 2 - Registered Capacity (MW)
+  - energy_source_3 (text) Energy Source 3
+  - energy_conversion_technology_3 (text) Energy Conversion Technology 3
+  - chp_cogeneration_3_yes_no (text) CHP Cogeneration 3 (Yes/No)
+  - storage_capacity_3_mwh (text) Storage Capacity 3 (MWh)
+  - storage_duration_3_hours (text) Storage Duration 3 (Hours)
+  - energy_source_energy_conversion_technology_3_registered_capacity_mw (text) Energy Source & Energy Conversion Technology 3 - Registered Capacity (MW)
+  - flexible_connection_yes_no (text) Flexible Connection (Yes/No)
+  - connection_status (text) Connection Status
+  - already_connected_registered_capacity_mw (double) Already connected Registered Capacity (MW)
+  - maximum_export_capacity_mw (double) Maximum Export Capacity (MW)
+  - maximum_export_capacity_mva (double) Maximum Export Capacity (MVA)
+  - maximum_import_capacity_mw (double) Maximum Import Capacity (MW)
+  - maximum_import_capacity_mva (double) Maximum Import Capacity (MVA)
+  - date_connected (date) Date Connected
+  - accepted_to_connect_registered_capacity_mw (double) Accepted to Connect Registered Capacity (MW)
+  - change_to_maximum_export_capacity_mw (double) Change to Maximum Export Capacity (MW)
+  - change_to_maximum_export_capacity_mva (double) Change to Maximum Export Capacity (MVA)
+  - change_to_maximum_import_capacity_mw (double) Change to Maximum Import Capacity (MW)
+  - change_to_maximum_import_capacity_mva (double) Change to Maximum Import Capacity (MVA)
+  - date_accepted (date) Date Accepted
+  - target_energisation_date (date) Target Energisation Date
+  - distribution_service_provider_y_n (text) Distribution Service Provider (Y/N)
+  - transmission_service_provider_y_n (text) Transmission Service Provider (Y/N)
+  - reference (text) Reference
+  - in_a_connection_queue_y_n (text) In a Connection Queue (Y/N)
+  - distribution_reinforcement_reference (text) Distribution Reinforcement Reference
+  - transmission_reinforcement_reference (text) Transmission Reinforcement Reference
+  - last_updated (date) Last Updated
+  - longitude (double) longitude
+  - latitude (double) latitude
+  - spatialcoordinates_customer (geo_point_2d) SpatialCoordinates_Customer
+  - sitefunctionallocation (text) SiteFunctionalLocation
+  - primary_resource_type_group (text) Primary Resource Type_Group
+  - local_authority (text) local_authority
+  - local_authority_county (text) local_authority_County
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-embedded-capacity-register-1-under-1mw ===
+alanlar:
+  - export_mpan_msid (text) Export MPAN / MSID
+  - import_mpan_msid (text) Import MPAN / MSID
+  - customer_name (text) Customer Name
+  - customer_site (text) Customer Site
+  - address_line_1 (text) Address Line 1
+  - address_line_2 (text) Address Line 2
+  - town_city (text) Town / City
+  - county (text) County
+  - postcode (text) Postcode
+  - country (text) Country
+  - location_x_coordinate_eastings_where_data_is_held (text) Location (X-coordinate):_Eastings (where data is held)
+  - location_y_coordinate_northings_where_data_is_held (text) Location (y-coordinate):_Northings (where data is held)
+  - grid_supply_point (text) Grid Supply Point
+  - bulk_supply_point (text) Bulk Supply Point
+  - primary (text) Primary
+  - point_of_connection_poc_voltage_kv (text) Point of Connection (POC)_Voltage (kV)
+  - licence_area (text) Licence Area 
+  - energy_source_1 (text) Energy Source 1
+  - energy_conversion_technology_1 (text) Energy Conversion Technology 1
+  - chp_cogeneration_yes_no (text) CHP Cogeneration (Yes/No)
+  - storage_capacity_1_mwh (double) Storage Capacity 1 (MWh)
+  - storage_duration_1_hours (double) Storage Duration 1 (Hours)
+  - energy_source_energy_conversion_technology_1_registered_capacity_mw (double) Energy Source & Energy Conversion Technology 1 - Registered Capacity (MW)
+  - energy_source_2 (text) Energy Source 2
+  - energy_conversion_technology_2 (text) Energy Conversion Technology 2
+  - chp_cogeneration_2_yes_no (text) CHP Cogeneration 2 (Yes/No)
+  - storage_capacity_2_mwh (double) Storage Capacity 2 (MWh)
+  - storage_duration_2_hours (double) Storage Duration 2 (Hours)
+  - energy_source_energy_conversion_technology_2_registered_capacity_mw (double) Energy Source & Energy Conversion Technology 2 - Registered Capacity (MW)
+  - energy_source_3 (text) Energy Source 3
+  - energy_conversion_technology_3 (text) Energy Conversion Technology 3
+  - chp_cogeneration_3_yes_no (text) CHP Cogeneration 3 (Yes/No)
+  - storage_capacity_3_mwh (double) Storage Capacity 3 (MWh)
+  - storage_duration_3_hours (double) Storage Duration 3 (Hours)
+  - energy_source_energy_conversion_technology_3_registered_capacity_mw (double) Energy Source & Energy Conversion Technology 3 - Registered Capacity (MW)
+  - flexible_connection_yes_no (text) Flexible Connection (Yes/No)
+  - connection_status (text) Connection Status
+  - already_connected_registered_capacity_mw (double) Already connected Registered Capacity (MW)
+  - already_connected_maximum_export_capacity_mw (double) Already Connected - Maximum Export Capacity (MW)
+  - already_connected_maximum_export_capacity_mva (double) Already Connected - Maximum Export Capacity (MVA)
+  - already_connected_maximum_import_capacity_mw (double) Already Connected - Maximum Import Capacity (MW)
+  - already_connected_maximum_import_capacity_mva (double) Already Connected - Maximum Import Capacity (MVA)
+  - date_connected (date) Date Connected
+  - accepted_to_connect_registered_capacity_mw (double) Accepted to Connect Registered Capacity (MW)
+  - change_to_maximum_export_capacity_mw (double) Change to Maximum Export Capacity (MW)
+  - change_to_maximum_export_capacity_mva (double) Change to Maximum Export Capacity (MVA)
+  - change_to_maximum_import_capacity_mw (double) Change to Maximum Import Capacity (MW)
+  - change_to_maximum_import_capacity_mva (double) Change to Maximum Import Capacity (MVA)
+  - date_accepted (date) Date Accepted
+  - target_energisation_date (date) Target Energisation Date
+  - distribution_service_provider_y_n (text) Distribution Service Provider (Y/N)
+  - transmission_service_provider_y_n (text) Transmission Service Provider (Y/N)
+  - reference (text) Reference
+  - in_a_connection_queue_y_n (text) In a Connection Queue (Y/N)
+  - distribution_reinforcement_reference (text) Distribution Reinforcement Reference
+  - transmission_reinforcement_reference (text) Transmission Reinforcement Reference
+  - last_updated (date) Last Updated
+  - longitude (double) Longitude
+  - latitude (double) Latitude
+  - sitefunctionallocation (text) SiteFunctionalLocation
+  - primary_resource_type_group (text) Primary Resource Type_Group
+  - spatial_coordinates (geo_point_2d) spatial_coordinates
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-flexibility-dispatches ===
+alanlar:
+  - company_name (text) company_name
+  - fu_id (text) fu_id
+  - zone (text) zone
+  - product (text) product
+  - start_time_local (datetime) start_time_local
+  - end_time_local (datetime) end_time_local
+  - availability_mw_req (double) availability_mw_req
+  - utilisation_mw_req (double) utilisation_mw_req
+  - availability_price (double) availability_price
+  - utilisation_price (double) utilisation_price
+  - availability_mwh_req (double) availability_mwh_req
+  - utilisation_mwh_req (double) utilisation_mwh_req
+  - technology (text) technology
+  - dispatch_type (text) dispatch_type
+  - hours_requested (double) hours_requested
+  - dispatch_method (text) dispatch_method
+  - start_time_utc (text) start_time_utc
+  - end_time_utc (text) end_time_utc
+  - time_utc (text) time_utc
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-flexibility-tender-data ===
+alanlar:
+  - competition_pot (text) Competition_Pot
+  - flexibility_zone (text) Flexibility_Zone
+  - postcode (text) Post_Code
+  - tender_round (text) Tender_Round
+  - geo_point (geo_point_2d) geo_point
+  - local_authority_name (text) local_authority_name
+  - local_authority_code (text) local_authority_code
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-hv-flex-zones ===
+alanlar:
+  - geo_point_2d (geo_point_2d) Geo Point
+  - geo_shape (geo_shape) Geo Shape
+  - dno (text) dno
+  - tender_round (text) tender_round
+  - flexibility_zone (text) flexibility_zone
+  - constraint_type (text) constraint_type
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-low-voltage-dnoa ===
+alanlar:
+  - area (text) Area
+  - secondary_site_functional_location (text) SiteFunctionalLocation
+  - transformer_functional_location (text) Transformer Functional Location
+  - deferred_transformer_size_kva (double) Deferred Transformer size (kVA)
+  - dnoa_result (text) DNOA Result
+  - constraint_year (text) Constraint year
+  - tr13_flex_capacity_awarded_mw (double) TR13 flex capacity awarded(MW)
+  - tr13_flex_capacity_awarded_kw (double) TR13 flex capacity awarded(kW)
+  - geopoint (geo_point_2d) geopoint
+  - localauthority (text) localauthority
+  - postcode (text) postcode
+  - county (text) County Council
+  - utilisation_band (text) Utilisation Band
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-ltds-cim ===
+sat²r say²s²: 0
+alanlar:
+÷rnek sat²rlar:
+
+=== ukpn-ltds-table-1-circuit-data ===
+alanlar:
+  - gridsupplypoint (text) GridSupplyPoint
+  - fromsubstation (text) FromSubstation
+  - fromnode (text) FromNode
+  - tonode (text) ToNode
+  - tosubstation (text) ToSubstation
+  - linename (text) LineName
+  - operating_voltage (text) OperatingVoltage (kV)
+  - positive_sequence_impedance_r_percent (double) Positive_Sequence_Impedance_R_Percent
+  - positive_sequence_impedance_x_percent (double) Positive_Sequence_Impedance_X_Percent
+  - susceptance_b_percent (double) Susceptance_B_ Percent
+  - rating_amps_summer (text) Rating_Amps_Summer
+  - rating_amps_winter (text) Rating_Amps_Winter
+  - circuit_length (text) Circuit_Length (km)
+  - fromsubstation_sitefunctionallocation (text) FromSubstation_SiteFunctionalLocation
+  - licencearea (text) LicenceArea
+  - id (int) ID
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-ltds-table-2b-transformer-data-3w ===
+alanlar:
+  - gridsupplypoint (text) GridSupplyPoint
+  - hv_node (text) HV_Node
+  - hv_substation (text) HV_Substation
+  - voltage_hv (text) Voltage_HV (kV)
+  - lv_node_1 (text) LV_Node_1
+  - lv_substation_1 (text) LV_Substation_1
+  - voltage_lv_1 (text) Voltage_LV_1 (kV)
+  - lv_node_2 (text) LV_Node_2
+  - lv_substation_2 (text) LV_Substation_2
+  - voltage_lv_2 (text) Voltage_LV_2 (kV)
+  - vector_group_hv (text) Vector_Group_HV
+  - vector_group_lv1 (text) Vector_Group_LV1
+  - vector_group_lv2 (text) Vector_Group_LV2
+  - positive_sequence_impedance_r_hv_lv1_percent (double) Positive_Sequence_Impedance_R_HV_LV1_Percent
+  - positive_sequence_impedance_r_hv_lv2_percent (double) Positive_Sequence_Impedance_R_HV_LV2_Percent
+  - positive_sequence_impedance_r_lv1_lv2_percent (double) Positive_Sequence_Impedance_R_LV1_LV2_Percent
+  - positive_sequence_impedance_x_hv_lv1_percent (double) Positive_Sequence_Impedance_X_HV_LV1_Percent
+  - positive_sequence_impedance_x_lv1_lv2_percent (double) Positive_Sequence_Impedance_X_LV1_LV2_Percent
+  - positive_sequence_impedance_x_hv_lv2_percent (double) Positive_Sequence_Impedance_X_HV_LV2_Percent
+  - zero_sequence_impedance_x_hv_lv1_percent (double) Zero_Sequence_Impedance_X_HV_LV1_Percent
+  - zero_sequence_impedance_x_hv_lv2_percent (double) Zero_Sequence_Impedance_X_HV_LV2_Percent
+  - zero_sequence_impedance_x_lv1_lv2_percent (double) Zero_Sequence_Impedance_X_LV1_LV2_Percent
+  - tap_range_min_percent_hv (int) Tap_Range_Min_Percent_HV
+  - tap_range_min_percent_lv1 (int) Tap_Range_Min_Percent_LV1
+  - tap_range_min_percent_lv2 (int) Tap_Range_Min_Percent_LV2
+  - tap_range_max_percent_hv (int) Tap_Range_Max_Percent_HV
+  - tap_range_max_percent_lv1 (int) Tap_Range_Max_Percent_LV1
+  - tap_range_max_percent_lv2 (int) Tap_Range_Max_Percent_LV2
+  - transformer_rating_mva_summer_hv (int) Transformer_Rating_MVA_Summer_HV
+  - transformer_rating_mva_winter_hv (int) Transformer_Rating_MVA_Winter_HV
+  - transformer_rating_mva_summer_lv1 (int) Transformer_Rating_MVA_Summer_LV1
+  - transformer_rating_mva_winter_lv1 (int) Transformer_Rating_MVA_Winter_LV1
+  - transformer_rating_mva_summer_lv2 (int) Transformer_Rating_MVA_Summer_LV2
+  - transformer_rating_mva_winter_lv2 (int) Transformer_Rating_MVA_Winter_LV2
+  - reverse_power_capability_percent (text) Reverse_Power_Capability_Percent
+  - method_of_earthing_hv (text) Method_of_Earthing_HV
+  - method_of_earthing_lv1 (text) Method_of_Earthing_LV1
+  - method_of_earthing_lv2 (text) Method_of_Earthing_LV2
+  - sitefunctionallocation (text) SiteFunctionalLocation
+  - licencearea (text) LicenceArea
+  - id (int) ID
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-ltds-table-4a-3ph-fault-level ===
+alanlar:
+  - gridsupplypoint (text) GridSupplyPoint
+  - substation (text) Substation
+  - nodename (text) NodeName
+  - voltage_level_kv (text) Voltage_Level_kV
+  - system_impedance_r_percent (double) System_Impedance_R_Percent
+  - system_impedance_x_percent (double) System_Impedance_X_Percent
+  - existing_system_fault_currents_peak_make_ka (double) Existing_System_Fault_Currents_Peak_Make_kA
+  - existing_system_fault_currents_rms_break_ka (double) Existing_System_Fault_Currents_RMS_Break_kA
+  - fault_rating_peak_make_ka (double) Fault_Rating_Peak_Make_kA
+  - fault_rating_peak_break_ka (double) Fault_Rating_Peak_Break_kA
+  - sitefunctionallocation (text) SiteFunctionalLocation
+  - licencearea (text) LicenceArea
+  - id (int) ID
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-ltds-table-5-generation ===
+alanlar:
+  - gridsupplypoint (text) GridSupplyPoint
+  - substation (text) Substation
+  - connection_voltage_kv (text) Connection_Voltage_kV
+  - installedcapacity_mva (double) InstalledCapacity_MVA
+  - fuel_type (text) FuelType
+  - connected_accepted (text) Connected_Accepted
+  - spatial_coordinates (geo_point_2d) Spatial Coordinates
+  - sitefunctionallocation (text) SiteFunctionalLocation
+  - licencearea (text) LicenceArea
+  - id (int) ID
+  - substation_mrid (text) Substation MRID
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-ltds-table-7-operational-restrictions ===
+alanlar:
+  - gridsupplypoint (text) GridSupplyPoint
+  - substation (text) Substation
+  - fault_level_operational_restrictions (text) Fault_Level_Operational_Restrictions
+  - sitefunctionallocation (text) SiteFunctionalLocation
+  - licencearea (text) LicenceArea
+  - id (int) ID
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-lv-flex-zones ===
+sat²r say²s²: 1793
+alanlar:
+  - transformer_id (text) Functional Location (FLOC)
+  - tender_round (text) Tender Round
+  - status (text) Status
+  - geo_shape (geo_shape) Geo Shape
+  - geo_point_2d (geo_point_2d) geo_point_2d
+÷rnek sat²rlar:
+  {"transformer_id": "LPN-S000000073429", "tender_round": "TR14", "status": "Live", "geo_shape": {"type": "Feature", "geometry": {"coordinates": [[[0.133353512911528, 51.45987373907047], [0.13333529006509, 51.45988554577917], [0.133287269738495, 51.45990544882975], [0.133084584102325, 51.459909136653685], [0.133080295534553, 51.45981703599227], [0.133236189549202, 51.459814199566424], [0.133211260501046, 51.45972249244895], [0.133238660526449, 51.45970186747035], [0.133307879450472, 51.45969109335187], [0.133420886705873, 51.45959149848017], [0.133426996112416, 51.45958883328357], [0.13347415492
+  {"transformer_id": "SPN-S000000213032", "tender_round": "TR14", "status": "Live", "geo_shape": {"type": "Feature", "geometry": {"coordinates": [[[-0.180310810023154, 51.362501740394634], [-0.180307235891505, 51.36259195406747], [-0.180580071986022, 51.36259619248506], [-0.180563878694737, 51.36268622814049], [-0.180582795203161, 51.362731971332934], [-0.180959324604392, 51.362810759761466], [-0.180969344087636, 51.362817471082145], [-0.181229863900007, 51.36278887305449], [-0.181240328081472, 51.362792335882155], [-0.18136849763789, 51.36281722157091], [-0.18140752188775, 51.36282968892933], [
+  {"transformer_id": "LPN-S000000070477", "tender_round": "TR14", "status": "Live", "geo_shape": {"type": "Feature", "geometry": {"coordinates": [[[-0.013956394809155, 51.47404833863325], [-0.013891260349667, 51.47406496885609], [-0.013819476703712, 51.474045335511626], [-0.01373494316331, 51.474075611718746], [-0.013623803224936, 51.47396306372159], [-0.01358969946808, 51.47396248585093], [-0.013516025636694, 51.474071362755865], [-0.013378109224434, 51.4740485581361], [-0.013338234748416, 51.47406348483567], [-0.013279581548203, 51.47407178935312], [-0.013263271003436, 51.474070676607], [-0.01
+
+=== ukpn-modification-application ===
+alanlar:
+  - dno (text) DNO
+  - site_functional_location (text) Site Functional Location
+  - proposed_point_of_connection_gsp_from_modapp_outcome (text) Proposed Point of Connection GSP from ModApp outcome
+  - longest_modapp_quoted_date_for_demand_project_signed (date) Longest ModApp Quoted Date for Demand Project (Signed)
+  - most_recent_date_of_issue_for_longest_modapp_quoted_date_for_demand_project_signed (date) Most Recent Date of Issue for Longest ModApp Quoted Date for Demand Project (Signed)
+  - longest_modapp_quoted_date_for_demand_project_offered_then_cancelled (date) Longest ModApp Quoted Date for Demand Project (Offered then Cancelled)
+  - most_recent_date_of_issue_for_longest_modapp_quoted_date_for_demand_project_offered_then_cancelled (date) Most Recent Date of Issue for Longest ModApp Quoted Date for Demand Project (Offered then Cancelled)
+  - longest_modapp_quoted_date_for_demand_project_offered (date) Longest ModApp Quoted Date for Demand Project (Offered)
+  - most_recent_date_of_issue_for_longest_modapp_quoted_date_for_demand_project_offered (date) Most Recent Date of issue for Longest ModApp Quoted Date for Demand Project (Offered)
+  - new_node_triggered_for_demand (text) New Node Triggered for Demand?
+  - gsp_s_where_applications_were_originally_made (text) GSP(s) where applications were originally made
+  - of_submitted_offers_at_gsp_awaiting_an_outcome (int) # of submitted offers at GSP awaiting an outcome
+  - geo_point_2d (geo_point_2d) Geo Point
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-network-losses ===
+alanlar:
+  - date (date) Date
+  - units_entering_sf (double) Units Entering - SF
+  - units_entering_r1 (double) Units Entering - R1
+  - units_entering_r2 (double) Units Entering - R2
+  - units_entering_r3 (double) Units Entering - R3
+  - units_entering_rf (double) Units Entering - RF
+  - units_entering_regulatory_reporting (double) Units Entering - Regulatory Reporting
+  - units_exiting_sf (double) Units Exiting - SF
+  - units_exiting_r1 (double) Units Exiting - R1
+  - units_exiting_r2 (double) Units Exiting - R2
+  - units_exiting_r3 (double) Units Exiting - R3
+  - units_exiting_rf (double) Units Exiting - RF
+  - units_exiting_regulatory_reporting (double) Units Exiting - Regulatory Reporting
+  - loss_sf (double) Loss - SF
+  - loss_r1 (double) Loss - R1
+  - loss_r2 (double) Loss - R2
+  - loss_r3 (double) Loss - R3
+  - loss_rf (double) Loss - RF
+  - loss_regulatory_reporting (double) Loss - Regulatory Reporting
+  - loss_sf0 (double) Percentage Loss - SF
+  - loss_r10 (double) Percentage Loss - R1
+  - loss_r20 (double) Percentage Loss - R2
+  - loss_r30 (double) Percentage Loss - R3
+  - loss_rf0 (double) Percentage Loss - RF
+  - loss_regulatory_reporting0 (double) Percentage Loss - Regulatory Reporting
+  - dno (text) DNO
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-optimise-prime ===
+sat²r say²s²: 0
+alanlar:
+÷rnek sat²rlar:
+
+=== ukpn-overall-queue-insights ===
+sat²r say²s²: 20
+alanlar:
+  - technology (text) Technology
+  - status (text) Status
+  - contracted_ders_mw (int) Contracted DERs (MW)
+÷rnek sat²rlar:
+  {"technology": "Solar", "status": "Gate 2 to Whole Queue - Phase 1", "contracted_ders_mw": 2859}
+  {"technology": "Solar", "status": "Connected, cancelled, CMP446 or reduced capacity since the opening of the window", "contracted_ders_mw": 1637}
+  {"technology": "Battery", "status": "Connected, cancelled, CMP446 or reduced capacity since the opening of the window", "contracted_ders_mw": 4067}
+
+=== ukpn-power-quality ===
+alanlar:
+  - sitefunctionallocation (text) SiteFunctionalLocation
+  - transformerfunctionallocation (text) TransformerFunctionalLocation
+  - phase (text) Phase
+  - harmonic (text) Harmonic
+  - latest (double) Latest
+  - latestweek (text) LatestWeek
+  - highest (double) Highest
+  - highestweek (text) HighestWeek
+  - sitename (text) SiteName
+  - spatial_coordinates (geo_point_2d) Spatial Coordinates
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-sensitivity-factors-export ===
+alanlar:
+  - grid_supply_point (text) grid_supply_point
+  - branch (text) branch
+  - node_name (text) node_name
+  - sensitivity_factor (double) sensitivity_factor
+  - is_zero (text) is_zero
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-sensitivity-factors-import ===
+alanlar:
+  - grid_supply_point (text) grid_supply_point
+  - branch (text) branch
+  - node_name (text) node_name
+  - sensitivity_factor (double) sensitivity_factor
+  - is_zero (text) is_zero
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn-standard-profiles-electricity-demand ===
+sat²r say²s²: 17520
+alanlar:
+  - timestamp (datetime) Timestamp
+  - non_variable (double) Non_variable
+  - solar_and_storage (double) Solar_and_Storage
+  - storage (double) Storage
+  - domestic (double) Domestic
+  - commercial (double) Commercial
+  - industrial (double) Industrial
+  - network_rail (double) Network_Rail
+  - ev_charging (double) EV_Charging
+  - datacentre (double) Datacentre
+  - solar_and_wind_and_storage (double) Solar_and_Wind_and_Storage
+÷rnek sat²rlar:
+  {"timestamp": "2019-11-26T22:00:00+00:00", "non_variable": 100.0, "solar_and_storage": 75.0, "storage": 75.0, "domestic": 27.9176545, "commercial": 71.1819664, "industrial": 38.4868399, "network_rail": 30.999721899999997, "ev_charging": 38.6607, "datacentre": 91.56942599999999, "solar_and_wind_and_storage": 75.0}
+  {"timestamp": "2019-11-27T14:30:00+00:00", "non_variable": 100.0, "solar_and_storage": 50.0, "storage": 50.0, "domestic": 19.730051, "commercial": 70.71908810000001, "industrial": 71.49564029999999, "network_rail": 33.2768114, "ev_charging": 56.9464, "datacentre": 80.37600379999999, "solar_and_wind_and_storage": 50.0}
+  {"timestamp": "2019-11-28T09:30:00+00:00", "non_variable": 100.0, "solar_and_storage": 50.0, "storage": 50.0, "domestic": 8.9502705, "commercial": 73.4070907, "industrial": 71.3303071, "network_rail": 45.9580182, "ev_charging": 43.3686, "datacentre": 78.5702424, "solar_and_wind_and_storage": 50.0}
+
+=== ukpn-standard-technology-profiles-generation ===
+sat²r say²s²: 17520
+alanlar:
+  - timestamp (datetime) Timestamp
+  - solar (double) Solar
+  - wind (double) Wind
+  - non_variable (double) Non_variable
+  - storage (double) Storage
+  - solar_and_storage (double) Solar_and_Storage
+  - solar_and_wind (double) Solar_and_Wind
+  - solar_and_wind_and_storage (double) Solar_and_Wind_and_Storage
+  - gas_large (double) Gas_large
+  - gas_small (double) Gas_small
+÷rnek sat²rlar:
+  {"timestamp": "2019-02-25T01:00:00+00:00", "solar": 0.0, "wind": 99.04488190000001, "non_variable": 100.0, "storage": 25.0, "solar_and_storage": 25.0, "solar_and_wind": 99.04488190000001, "solar_and_wind_and_storage": 99.04488190000001, "gas_large": 82.4635206, "gas_small": 8.216859999999999}
+  {"timestamp": "2019-02-25T01:30:00+00:00", "solar": 0.0, "wind": 95.12893700000001, "non_variable": 100.0, "storage": 25.0, "solar_and_storage": 25.0, "solar_and_wind": 95.12893700000001, "solar_and_wind_and_storage": 95.12893700000001, "gas_large": 81.6921672, "gas_small": 9.038546}
+  {"timestamp": "2019-02-25T03:00:00+00:00", "solar": 0.0, "wind": 91.8815617, "non_variable": 100.0, "storage": 25.0, "solar_and_storage": 25.0, "solar_and_wind": 91.8815617, "solar_and_wind_and_storage": 91.8815617, "gas_large": 54.98373720000001, "gas_small": 12.1591736}
+
+=== ukpn-wide-planning-status ===
+sat²r say²s²: 56
+alanlar:
+  - status (text) Status
+  - generation_type (text) Generation Type
+  - contracted_ders_mw (double) Contracted DERs (MW)
+÷rnek sat²rlar:
+  {"status": "Clean Power Action Plan - 2030", "generation_type": "3 Onshore Wind", "contracted_ders_mw": null}
+  {"status": "Clean Power Action Plan - 2030", "generation_type": "4 Unabated Gas", "contracted_ders_mw": null}
+  {"status": "Clean Power Action Plan - 2030", "generation_type": "EfW", "contracted_ders_mw": null}
+
+=== ukpn_primary_postcode_area ===
+alanlar:
+  - geo_point_2d (geo_point_2d) geo_point_2d
+  - geo_shape (geo_shape) Geo Shape
+  - primary (text) Primary
+  - grid_site (text) Grid_site
+  - grid_site_floc (text) Grid_site_floc
+  - dno (text) DNO
+  - firmcapacitywinter (double) Firm Capacity Winter
+  - firmcapacitysummer (double) Firm Capacity Summer
+  - seasonofconstraint (text) Seasonofconstraint
+  - demandrag (text) DemandRAG (Red Amber Green)
+  - demand (double) Unutilised Capacity
+  - primary_floc (text) Primary_site_floc
+  - grid_supply_point (text) Grid_supply_point
+  - grid_supply_point_floc (text) Grid_supply_point_floc
+  - operational_zone (text) Operational_zone
+  - generationavailablecapacity (double) Generation Available Capacity
+  - generationfirmcapacity (double) Generation Firm Capacity
+  - generationrag (text) GenerationRAG (Red Amber Green)
+  - generation_available_pct (double) Generation Available Pct
+  - licencearea (text) LicenceArea
+  - sitename (text) SiteName
+  - sitetype (text) SiteType
+  - sitevoltage (int) SiteVoltage
+  - gridref (text) gridref
+  - street (text) Street
+  - suburb (text) Suburb
+  - parish (text) Parish
+  - towncity (text) TownCity
+  - postcode (text) PostCode
+  - datecommissioned (date) DateCommissioned
+  - powertransformercount (int) PowerTransformerCount
+  - transratingsummer (text) transratingsummer
+  - transratingwinter (text) transratingwinter
+  - reversepower (text) reversepower
+  - county (text) county
+  - assessmentdate (date) assessmentdate
+  - measuredresistance_ohm (double) measuredresistance_ohm
+  - calculatedresistance (text) calculatedresistance
+  - last_report (text) last_report
+  - siteclassification (text) siteclassification
+  - resp25 (text) RESP25
+  - spatial_coordinates (geo_point_2d) Spatial Coordinates
+  - local_authority (text) local_authority
+  - local_authority_code (text) local_authority_code
+  - what3words (text) what3words
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden
+
+=== ukpn_secondary_postcode_area ===
+alanlar:
+  - dno (text) DNO
+  - sitefunctionallocationclean (text) sitefunctionallocation
+  - demand_headroom (text) demand_headroom
+  - onanrating (text) ONANRating
+  - source (text) Source
+  - geo_point_2d (geo_point_2d) Geo Point
+  - geo_shape (geo_shape) Geo Shape
+  - substationdesign (text) substationdesign
+  - utilisation_band (text) Utilisation Band
+  - predicted_year_of_reinforcement (text) Predicted year of reinforcement
+  - localauthority (text) localauthority
+  - customer_count (int) CustomerCount
+  - county (text) County Council
+  - sitefunctionallocation (text) sitefunctionallocation
+÷rnek sat²rlar:
+  ! okunamad²: HTTP Error 403: Forbidden

@@ -1,0 +1,8 @@
+{
+  "name": "Esnek Bağlantı Motoru",
+  "description": "Trafo merkezi bazında esnek (kısılabilir) GES bağlantısı ve kısıntı riski planlama aracı — Climathon 2026 prototipi.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

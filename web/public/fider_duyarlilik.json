@@ -1,0 +1,171 @@
+{
+ "ne": "Basit iki baralı gerilim kontrolünün gerçekçi OG fiderindeki geçerliliği",
+ "arac": "pandapower 3.5.6, Newton-Raphson",
+ "kurulum": "34.5 kV, 10 km, 10 eşit aralıklı bara, Hawk (477 MCM); tüketici yükü cosφ 0,95 endüktif, baralara eşit dağıtılmış. Gerilim sınırı %2.0 fiderin HER barasında aranır.",
+ "temsili": "Bu fider yapıları temsilîdir, gerçek bir TM fiderinin kendisi değildir. İletken, kesit, uzunluk, ara yük dağılımı ve kademe değiştirici ayarı yayımlanmıyor; EDAŞ'ta. Bu çalışma bağlantı etüdünün yerine geçmez.",
+ "bulgu": "Tüketici yükü ve fiderin ortasına bağlanma, basit kontrolü muhafazakâr yapar. Basit kontrolün göremediği tek durum aynı fiderde BAŞKA ÜRETİM olmasıdır: diğer santrallerin enjeksiyonu gerilimi birlikte yükseltir ve yeni santralin tek başına hesaplanan payı yetmeyebilir.",
+ "iyimser_senaryo_sayisi": 3,
+ "toplam_senaryo": 14,
+ "kapsam_disi": [
+  "kademe değiştirici (OLTC) tepkisi — gerçek fiderde gerilimi geri çeker",
+  "fider dallanması ve farklı kesitli bölümler",
+  "dengesiz yük, tek faz açma",
+  "koruma koordinasyonu (ayrı betik: kisa_devre.py)"
+ ],
+ "senaryolar": [
+  {
+   "senaryo": "Tahsisli hat (uygulamanın varsaydığı): ara yük yok, başka üretim yok",
+   "cos_phi": 1.0,
+   "fider_yuku_MW": 0.0,
+   "mevcut_uretim_MW": 0.0,
+   "baglanti_konumu": 1.0,
+   "basit_kontrol_MW": 16.64,
+   "fider_modeli_MW": 17.89,
+   "basit_kontrol_farki_yuzde": -7.0,
+   "yon": "muhafazakâr"
+  },
+  {
+   "senaryo": "Fiderde 5 MW tüketici yükü, santral hattın ucunda",
+   "cos_phi": 1.0,
+   "fider_yuku_MW": 5.0,
+   "mevcut_uretim_MW": 0.0,
+   "baglanti_konumu": 1.0,
+   "basit_kontrol_MW": 16.64,
+   "fider_modeli_MW": 23.15,
+   "basit_kontrol_farki_yuzde": -28.11,
+   "yon": "muhafazakâr"
+  },
+  {
+   "senaryo": "Fiderde 5 MW yük, santral fiderin ortasında",
+   "cos_phi": 1.0,
+   "fider_yuku_MW": 5.0,
+   "mevcut_uretim_MW": 0.0,
+   "baglanti_konumu": 0.5,
+   "basit_kontrol_MW": 16.64,
+   "fider_modeli_MW": 43.31,
+   "basit_kontrol_farki_yuzde": -61.57,
+   "yon": "muhafazakâr"
+  },
+  {
+   "senaryo": "Yaz öğlesi: fiderde yalnızca 1 MW yük, santral uçta",
+   "cos_phi": 1.0,
+   "fider_yuku_MW": 1.0,
+   "mevcut_uretim_MW": 0.0,
+   "baglanti_konumu": 1.0,
+   "basit_kontrol_MW": 16.64,
+   "fider_modeli_MW": 18.94,
+   "basit_kontrol_farki_yuzde": -12.12,
+   "yon": "muhafazakâr"
+  },
+  {
+   "senaryo": "Aynı fiderde 5 MW mevcut GES, 1 MW yük, yeni santral uçta",
+   "cos_phi": 1.0,
+   "fider_yuku_MW": 1.0,
+   "mevcut_uretim_MW": 5.0,
+   "baglanti_konumu": 1.0,
+   "basit_kontrol_MW": 16.64,
+   "fider_modeli_MW": 16.07,
+   "basit_kontrol_farki_yuzde": 3.56,
+   "yon": "İYİMSER"
+  },
+  {
+   "senaryo": "Aynı fiderde 10 MW mevcut GES, 1 MW yük, yeni santral uçta",
+   "cos_phi": 1.0,
+   "fider_yuku_MW": 1.0,
+   "mevcut_uretim_MW": 10.0,
+   "baglanti_konumu": 1.0,
+   "basit_kontrol_MW": 16.64,
+   "fider_modeli_MW": 13.22,
+   "basit_kontrol_farki_yuzde": 25.86,
+   "yon": "İYİMSER"
+  },
+  {
+   "senaryo": "Aynı fiderde 20 MW mevcut GES, 1 MW yük, yeni santral uçta",
+   "cos_phi": 1.0,
+   "fider_yuku_MW": 1.0,
+   "mevcut_uretim_MW": 20.0,
+   "baglanti_konumu": 1.0,
+   "basit_kontrol_MW": 16.64,
+   "fider_modeli_MW": 7.58,
+   "basit_kontrol_farki_yuzde": 119.58,
+   "yon": "İYİMSER"
+  },
+  {
+   "senaryo": "Tahsisli hat (uygulamanın varsaydığı): ara yük yok, başka üretim yok",
+   "cos_phi": 0.95,
+   "fider_yuku_MW": 0.0,
+   "mevcut_uretim_MW": 0.0,
+   "baglanti_konumu": 1.0,
+   "basit_kontrol_MW": 64.43,
+   "fider_modeli_MW": 177.82,
+   "basit_kontrol_farki_yuzde": -63.77,
+   "yon": "muhafazakâr"
+  },
+  {
+   "senaryo": "Fiderde 5 MW tüketici yükü, santral hattın ucunda",
+   "cos_phi": 0.95,
+   "fider_yuku_MW": 5.0,
+   "mevcut_uretim_MW": 0.0,
+   "baglanti_konumu": 1.0,
+   "basit_kontrol_MW": 64.43,
+   "fider_modeli_MW": 177.14,
+   "basit_kontrol_farki_yuzde": -63.63,
+   "yon": "muhafazakâr"
+  },
+  {
+   "senaryo": "Fiderde 5 MW yük, santral fiderin ortasında",
+   "cos_phi": 0.95,
+   "fider_yuku_MW": 5.0,
+   "mevcut_uretim_MW": 0.0,
+   "baglanti_konumu": 0.5,
+   "basit_kontrol_MW": 64.43,
+   "fider_modeli_MW": 355.68,
+   "basit_kontrol_farki_yuzde": -81.89,
+   "yon": "muhafazakâr"
+  },
+  {
+   "senaryo": "Yaz öğlesi: fiderde yalnızca 1 MW yük, santral uçta",
+   "cos_phi": 0.95,
+   "fider_yuku_MW": 1.0,
+   "mevcut_uretim_MW": 0.0,
+   "baglanti_konumu": 1.0,
+   "basit_kontrol_MW": 64.43,
+   "fider_modeli_MW": 177.68,
+   "basit_kontrol_farki_yuzde": -63.74,
+   "yon": "muhafazakâr"
+  },
+  {
+   "senaryo": "Aynı fiderde 5 MW mevcut GES, 1 MW yük, yeni santral uçta",
+   "cos_phi": 0.95,
+   "fider_yuku_MW": 1.0,
+   "mevcut_uretim_MW": 5.0,
+   "baglanti_konumu": 1.0,
+   "basit_kontrol_MW": 64.43,
+   "fider_modeli_MW": 177.15,
+   "basit_kontrol_farki_yuzde": -63.63,
+   "yon": "muhafazakâr"
+  },
+  {
+   "senaryo": "Aynı fiderde 10 MW mevcut GES, 1 MW yük, yeni santral uçta",
+   "cos_phi": 0.95,
+   "fider_yuku_MW": 1.0,
+   "mevcut_uretim_MW": 10.0,
+   "baglanti_konumu": 1.0,
+   "basit_kontrol_MW": 64.43,
+   "fider_modeli_MW": 176.61,
+   "basit_kontrol_farki_yuzde": -63.52,
+   "yon": "muhafazakâr"
+  },
+  {
+   "senaryo": "Aynı fiderde 20 MW mevcut GES, 1 MW yük, yeni santral uçta",
+   "cos_phi": 0.95,
+   "fider_yuku_MW": 1.0,
+   "mevcut_uretim_MW": 20.0,
+   "baglanti_konumu": 1.0,
+   "basit_kontrol_MW": 64.43,
+   "fider_modeli_MW": 175.49,
+   "basit_kontrol_farki_yuzde": -63.28,
+   "yon": "muhafazakâr"
+  }
+ ]
+}

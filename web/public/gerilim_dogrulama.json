@@ -1,0 +1,1619 @@
+{
+ "ne": "fider.ts kısa hat gerilim formülünün pandapower yük akışına karşı doğrulaması",
+ "arac": "pandapower 3.5.6, Newton-Raphson",
+ "kurulum": "2 bara, 34.5 kV, slack TM barası, uçta P enjekte eden üretim; hat kapasitansı 9.5 nF/km (formülde yok, yük akışında var)",
+ "durum_sayisi": 150,
+ "yakinsamayan_durumlar": [],
+ "calisma_araligi": {
+  "tanim": "formülün |ΔU| ≤ %2.0 verdiği durumlar — uygulamanın fiilen kullandığı aralık",
+  "durum_sayisi": 125,
+  "ortalama_mutlak_fark_puan": 0.19975,
+  "azami_mutlak_fark_puan": 2.0246
+ },
+ "tum_aralik": {
+  "ortalama_mutlak_fark_puan": 0.3077,
+  "azami_mutlak_fark_puan": 3.2099,
+  "en_kotu_durum": {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 0.95,
+   "P_MW": 402.696,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": -0.7099,
+   "fark_puan": 3.2099
+  }
+ },
+ "kapasite_karsilastirmasi": {
+  "tanim": "ΔU = %2.0 sınırına denk gelen azami güç: kapalı formül vs ikiye bölme ile yük akışı",
+  "ortalama_mutlak_fark_yuzde": 20.2436,
+  "azami_mutlak_fark_yuzde": 63.773,
+  "en_kotu_durum": {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 0.95,
+   "formul_MW": 32.216,
+   "yuk_akisi_MW": 88.927,
+   "fark_yuzde": -63.773
+  },
+  "yon": "formül gerçekten büyükse pozitif (iyimser), küçükse negatif (muhafazakâr)"
+ },
+ "yon_analizi": {
+  "soru": "Formül gerçek kapasiteden BÜYÜK bir sayı veriyor mu? (iyimser = tehlikeli)",
+  "iyimser_kapasite_durumu": 0,
+  "toplam_kapasite_durumu": 25,
+  "iyimser_delta_u_durumu": 21,
+  "toplam_calisma_durumu": 125,
+  "en_iyimser_delta_u_puan": -0.0196,
+  "en_iyimser_delta_u_durumu": {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 0.466,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.2196,
+   "fark_puan": -0.0196
+  },
+  "sonuc": "Hicbir durumda iyimser degil; formul her durumda gercek kapasiteden kucuk, yani muhafazakar.",
+  "neden_cosphi_daha_muhafazakar": "cosφ<1'de R·P ile X·Q birbirini büyük ölçüde götürüyor; birinci dereceden terim küçülünce ihmal edilen ikinci dereceden terim göreli olarak büyüyor. Sapma bu yüzden cosφ=0,95'te daha büyük — ve muhafazakâr yönde: gerçek kapasite formülün söylediğinden fazla."
+ },
+ "kapsam_disi": [
+  "fider üzerindeki ara yükler ve dallanma",
+  "kademe değiştirici (OLTC) tepkisi",
+  "dengesiz yük ve tek faz açma",
+  "N-1 ve koruma koordinasyonu"
+ ],
+ "kapasiteler": [
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "formul_MW": 46.571,
+   "yuk_akisi_MW": 48.373,
+   "fark_yuzde": -3.726
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 0.95,
+   "formul_MW": 82.909,
+   "yuk_akisi_MW": 93.647,
+   "fark_yuzde": -11.467
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "formul_MW": 18.628,
+   "yuk_akisi_MW": 19.338,
+   "fark_yuzde": -3.672
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 0.95,
+   "formul_MW": 33.163,
+   "yuk_akisi_MW": 37.435,
+   "fark_yuzde": -11.411
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "formul_MW": 9.314,
+   "yuk_akisi_MW": 9.65,
+   "fark_yuzde": -3.476
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 0.95,
+   "formul_MW": 16.582,
+   "yuk_akisi_MW": 18.675,
+   "fark_yuzde": -11.207
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "formul_MW": 6.209,
+   "yuk_akisi_MW": 6.411,
+   "fark_yuzde": -3.149
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 0.95,
+   "formul_MW": 11.054,
+   "yuk_akisi_MW": 12.402,
+   "fark_yuzde": -10.867
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "formul_MW": 4.657,
+   "yuk_akisi_MW": 4.786,
+   "fark_yuzde": -2.687
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 0.95,
+   "formul_MW": 8.291,
+   "yuk_akisi_MW": 9.252,
+   "fark_yuzde": -10.387
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "formul_MW": 83.208,
+   "yuk_akisi_MW": 89.694,
+   "fark_yuzde": -7.231
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 0.95,
+   "formul_MW": 322.157,
+   "yuk_akisi_MW": 889.016,
+   "fark_yuzde": -63.763
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "formul_MW": 33.283,
+   "yuk_akisi_MW": 35.857,
+   "fark_yuzde": -7.179
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 0.95,
+   "formul_MW": 128.863,
+   "yuk_akisi_MW": 355.612,
+   "fark_yuzde": -63.763
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "formul_MW": 16.642,
+   "yuk_akisi_MW": 17.893,
+   "fark_yuzde": -6.993
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 0.95,
+   "formul_MW": 64.431,
+   "yuk_akisi_MW": 177.816,
+   "fark_yuzde": -63.765
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "formul_MW": 11.094,
+   "yuk_akisi_MW": 11.889,
+   "fark_yuzde": -6.682
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 0.95,
+   "formul_MW": 42.954,
+   "yuk_akisi_MW": 118.555,
+   "fark_yuzde": -63.768
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "formul_MW": 8.321,
+   "yuk_akisi_MW": 8.875,
+   "fark_yuzde": -6.244
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 0.95,
+   "formul_MW": 32.216,
+   "yuk_akisi_MW": 88.927,
+   "fark_yuzde": -63.773
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "formul_MW": 137.942,
+   "yuk_akisi_MW": 165.267,
+   "fark_yuzde": -16.534
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "formul_MW": 55.177,
+   "yuk_akisi_MW": 66.066,
+   "fark_yuzde": -16.483
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "formul_MW": 27.588,
+   "yuk_akisi_MW": 32.961,
+   "fark_yuzde": -16.301
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "formul_MW": 18.392,
+   "yuk_akisi_MW": 21.895,
+   "fark_yuzde": -15.996
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "formul_MW": 13.794,
+   "yuk_akisi_MW": 16.338,
+   "fark_yuzde": -15.567
+  }
+ ],
+ "durumlar": [
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 4.657,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.1995,
+   "fark_puan": 0.0005
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 11.643,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.4955,
+   "fark_puan": 0.0045
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 23.286,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9818,
+   "fark_puan": 0.0182
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 34.928,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.4592,
+   "fark_puan": 0.0408
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 46.571,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.9281,
+   "fark_puan": 0.0719
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 58.214,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.3889,
+   "fark_puan": 0.1111
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 0.95,
+   "P_MW": 8.291,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.1981,
+   "fark_puan": 0.0019
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 0.95,
+   "P_MW": 20.727,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.4869,
+   "fark_puan": 0.0131
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 0.95,
+   "P_MW": 41.454,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9478,
+   "fark_puan": 0.0522
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 0.95,
+   "P_MW": 62.181,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.3839,
+   "fark_puan": 0.1161
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 0.95,
+   "P_MW": 82.909,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.7958,
+   "fark_puan": 0.2042
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 0.95,
+   "P_MW": 103.636,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.1844,
+   "fark_puan": 0.3156
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 1.863,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.2005,
+   "fark_puan": -0.0005
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 4.657,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.4966,
+   "fark_puan": 0.0034
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 9.314,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9828,
+   "fark_puan": 0.0172
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 13.971,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.4603,
+   "fark_puan": 0.0397
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 18.628,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.9292,
+   "fark_puan": 0.0708
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 23.286,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.39,
+   "fark_puan": 0.11
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 0.95,
+   "P_MW": 3.316,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.1991,
+   "fark_puan": 0.0009
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 0.95,
+   "P_MW": 8.291,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.488,
+   "fark_puan": 0.012
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 0.95,
+   "P_MW": 16.582,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9489,
+   "fark_puan": 0.0511
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 0.95,
+   "P_MW": 24.873,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.385,
+   "fark_puan": 0.115
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 0.95,
+   "P_MW": 33.163,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.7969,
+   "fark_puan": 0.2031
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 0.95,
+   "P_MW": 41.454,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.1855,
+   "fark_puan": 0.3145
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 0.931,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.2043,
+   "fark_puan": -0.0043
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 2.329,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.5004,
+   "fark_puan": -0.0004
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 4.657,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9867,
+   "fark_puan": 0.0133
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 6.986,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.4642,
+   "fark_puan": 0.0358
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 9.314,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.9331,
+   "fark_puan": 0.0669
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 11.643,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.3939,
+   "fark_puan": 0.1061
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 0.95,
+   "P_MW": 1.658,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.203,
+   "fark_puan": -0.003
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 0.95,
+   "P_MW": 4.145,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.4919,
+   "fark_puan": 0.0081
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 0.95,
+   "P_MW": 8.291,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9528,
+   "fark_puan": 0.0472
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 0.95,
+   "P_MW": 12.436,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.3889,
+   "fark_puan": 0.1111
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 0.95,
+   "P_MW": 16.582,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.8009,
+   "fark_puan": 0.1991
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 0.95,
+   "P_MW": 20.727,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.1895,
+   "fark_puan": 0.3105
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 0.621,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.2107,
+   "fark_puan": -0.0107
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 1.552,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.5068,
+   "fark_puan": -0.0068
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 3.105,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9931,
+   "fark_puan": 0.0069
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 4.657,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.4706,
+   "fark_puan": 0.0294
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 6.209,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.9396,
+   "fark_puan": 0.0604
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 7.762,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.4004,
+   "fark_puan": 0.0996
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 0.95,
+   "P_MW": 1.105,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.2094,
+   "fark_puan": -0.0094
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 0.95,
+   "P_MW": 2.764,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.4983,
+   "fark_puan": 0.0017
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 0.95,
+   "P_MW": 5.527,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9593,
+   "fark_puan": 0.0407
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 0.95,
+   "P_MW": 8.291,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.3955,
+   "fark_puan": 0.1045
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 0.95,
+   "P_MW": 11.054,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.8076,
+   "fark_puan": 0.1924
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 0.95,
+   "P_MW": 13.818,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.1963,
+   "fark_puan": 0.3037
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 0.466,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.2196,
+   "fark_puan": -0.0196
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 1.164,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.5158,
+   "fark_puan": -0.0158
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 2.329,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 1.0021,
+   "fark_puan": -0.0021
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 3.493,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.4796,
+   "fark_puan": 0.0204
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 4.657,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.9487,
+   "fark_puan": 0.0513
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 5.821,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.4095,
+   "fark_puan": 0.0905
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 0.95,
+   "P_MW": 0.829,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.2183,
+   "fark_puan": -0.0183
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 0.95,
+   "P_MW": 2.073,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.5073,
+   "fark_puan": -0.0073
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 0.95,
+   "P_MW": 4.145,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9684,
+   "fark_puan": 0.0316
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 0.95,
+   "P_MW": 6.218,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.4047,
+   "fark_puan": 0.0953
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 0.95,
+   "P_MW": 8.291,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.8169,
+   "fark_puan": 0.1831
+  },
+  {
+   "iletken": "Partridge (266,8 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 0.95,
+   "P_MW": 10.364,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.2057,
+   "fark_puan": 0.2943
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 8.321,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.1988,
+   "fark_puan": 0.0012
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 20.802,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.4914,
+   "fark_puan": 0.0086
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 41.604,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9657,
+   "fark_puan": 0.0343
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 62.406,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.4234,
+   "fark_puan": 0.0766
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 83.208,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.8654,
+   "fark_puan": 0.1346
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 104.01,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.292,
+   "fark_puan": 0.208
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 0.95,
+   "P_MW": 32.216,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.1799,
+   "fark_puan": 0.0201
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 0.95,
+   "P_MW": 80.539,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.374,
+   "fark_puan": 0.126
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 0.95,
+   "P_MW": 161.078,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.498,
+   "fark_puan": 0.502
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 0.95,
+   "P_MW": 241.618,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 0.3695,
+   "fark_puan": 1.1305
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 0.95,
+   "P_MW": 322.157,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": -0.0246,
+   "fark_puan": 2.0246
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 0.95,
+   "P_MW": 402.696,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": -0.7099,
+   "fark_puan": 3.2099
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 3.328,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.1998,
+   "fark_puan": 0.0002
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 8.321,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.4925,
+   "fark_puan": 0.0075
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 16.642,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9667,
+   "fark_puan": 0.0333
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 24.962,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.4245,
+   "fark_puan": 0.0755
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 33.283,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.8664,
+   "fark_puan": 0.1336
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 41.604,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.293,
+   "fark_puan": 0.207
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 0.95,
+   "P_MW": 12.886,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.1809,
+   "fark_puan": 0.0191
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 0.95,
+   "P_MW": 32.216,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.375,
+   "fark_puan": 0.125
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 0.95,
+   "P_MW": 64.431,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.4991,
+   "fark_puan": 0.5009
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 0.95,
+   "P_MW": 96.647,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 0.3706,
+   "fark_puan": 1.1294
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 0.95,
+   "P_MW": 128.863,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": -0.0235,
+   "fark_puan": 2.0235
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 0.95,
+   "P_MW": 161.078,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": -0.7087,
+   "fark_puan": 3.2087
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 1.664,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.2034,
+   "fark_puan": -0.0034
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 4.16,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.4961,
+   "fark_puan": 0.0039
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 8.321,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9703,
+   "fark_puan": 0.0297
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 12.481,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.4281,
+   "fark_puan": 0.0719
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 16.642,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.8701,
+   "fark_puan": 0.1299
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 20.802,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.2967,
+   "fark_puan": 0.2033
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 0.95,
+   "P_MW": 6.443,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.1845,
+   "fark_puan": 0.0155
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 0.95,
+   "P_MW": 16.108,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.3787,
+   "fark_puan": 0.1213
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 0.95,
+   "P_MW": 32.216,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.5029,
+   "fark_puan": 0.4971
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 0.95,
+   "P_MW": 48.324,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 0.3745,
+   "fark_puan": 1.1255
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 0.95,
+   "P_MW": 64.431,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": -0.0194,
+   "fark_puan": 2.0194
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 0.95,
+   "P_MW": 80.539,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": -0.7045,
+   "fark_puan": 3.2045
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 1.109,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.2095,
+   "fark_puan": -0.0095
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 2.774,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.5021,
+   "fark_puan": -0.0021
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 5.547,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9764,
+   "fark_puan": 0.0236
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 8.321,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.4343,
+   "fark_puan": 0.0657
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 11.094,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.8762,
+   "fark_puan": 0.1238
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 13.868,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.3029,
+   "fark_puan": 0.1971
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 0.95,
+   "P_MW": 4.295,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.1906,
+   "fark_puan": 0.0094
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 0.95,
+   "P_MW": 10.739,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.3848,
+   "fark_puan": 0.1152
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 0.95,
+   "P_MW": 21.477,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.5092,
+   "fark_puan": 0.4908
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 0.95,
+   "P_MW": 32.216,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 0.381,
+   "fark_puan": 1.119
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 0.95,
+   "P_MW": 42.954,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": -0.0127,
+   "fark_puan": 2.0127
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 0.95,
+   "P_MW": 53.693,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": -0.6976,
+   "fark_puan": 3.1976
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 0.832,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.2179,
+   "fark_puan": -0.0179
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 2.08,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.5106,
+   "fark_puan": -0.0106
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 4.16,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9849,
+   "fark_puan": 0.0151
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 6.241,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.4428,
+   "fark_puan": 0.0572
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 8.321,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.8849,
+   "fark_puan": 0.1151
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 10.401,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.3116,
+   "fark_puan": 0.1884
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 0.95,
+   "P_MW": 3.222,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.1991,
+   "fark_puan": 0.0009
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 0.95,
+   "P_MW": 8.054,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.3935,
+   "fark_puan": 0.1065
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 0.95,
+   "P_MW": 16.108,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.518,
+   "fark_puan": 0.482
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 0.95,
+   "P_MW": 24.162,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 0.3901,
+   "fark_puan": 1.1099
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 0.95,
+   "P_MW": 32.216,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": -0.0033,
+   "fark_puan": 2.0033
+  },
+  {
+   "iletken": "Hawk (477 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 0.95,
+   "P_MW": 40.27,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": -0.6879,
+   "fark_puan": 3.1879
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 13.794,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.1973,
+   "fark_puan": 0.0027
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 34.486,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.4821,
+   "fark_puan": 0.0179
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 68.971,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9289,
+   "fark_puan": 0.0711
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 103.457,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.3418,
+   "fark_puan": 0.1582
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 137.942,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.7217,
+   "fark_puan": 0.2783
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 2,
+   "cos_phi": 1.0,
+   "P_MW": 172.428,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.0696,
+   "fark_puan": 0.4304
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 5.518,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.1982,
+   "fark_puan": 0.0018
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 13.794,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.4831,
+   "fark_puan": 0.0169
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 27.588,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9299,
+   "fark_puan": 0.0701
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 41.383,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.3428,
+   "fark_puan": 0.1572
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 55.177,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.7227,
+   "fark_puan": 0.2773
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 5,
+   "cos_phi": 1.0,
+   "P_MW": 68.971,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.0706,
+   "fark_puan": 0.4294
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 2.759,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.2017,
+   "fark_puan": -0.0017
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 6.897,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.4866,
+   "fark_puan": 0.0134
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 13.794,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9334,
+   "fark_puan": 0.0666
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 20.691,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.3462,
+   "fark_puan": 0.1538
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 27.588,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.7262,
+   "fark_puan": 0.2738
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 10,
+   "cos_phi": 1.0,
+   "P_MW": 34.486,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.0742,
+   "fark_puan": 0.4258
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 1.839,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.2074,
+   "fark_puan": -0.0074
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 4.598,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.4923,
+   "fark_puan": 0.0077
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 9.196,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9391,
+   "fark_puan": 0.0609
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 13.794,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.3521,
+   "fark_puan": 0.1479
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 18.392,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.7321,
+   "fark_puan": 0.2679
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 15,
+   "cos_phi": 1.0,
+   "P_MW": 22.99,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.0801,
+   "fark_puan": 0.4199
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 1.379,
+   "formul_yuzde": 0.2,
+   "yuk_akisi_yuzde": 0.2154,
+   "fark_puan": -0.0154
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 3.449,
+   "formul_yuzde": 0.5,
+   "yuk_akisi_yuzde": 0.5004,
+   "fark_puan": -0.0004
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 6.897,
+   "formul_yuzde": 1.0,
+   "yuk_akisi_yuzde": 0.9472,
+   "fark_puan": 0.0528
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 10.346,
+   "formul_yuzde": 1.5,
+   "yuk_akisi_yuzde": 1.3602,
+   "fark_puan": 0.1398
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 13.794,
+   "formul_yuzde": 2.0,
+   "yuk_akisi_yuzde": 1.7403,
+   "fark_puan": 0.2597
+  },
+  {
+   "iletken": "Drake (795 MCM)",
+   "mesafe_km": 20,
+   "cos_phi": 1.0,
+   "P_MW": 17.243,
+   "formul_yuzde": 2.5,
+   "yuk_akisi_yuzde": 2.0883,
+   "fark_puan": 0.4117
+  }
+ ]
+}

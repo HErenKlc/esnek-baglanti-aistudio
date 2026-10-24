@@ -1,0 +1,590 @@
+{
+ "tarih": "2026-10-01",
+ "oncekiTarih": "2026-07-16",
+ "kaynak": "TEİAŞ, \"2026 Yılı İçin Dağıtım Seviyesinden Transformatör Merkezi Bazlı Tahsis Edilen Güneş ve Rüzgar Kaynaklı Kalan Lisanssız Üretim Kapasiteleri\", teias.gov.tr/duyurular",
+ "tmSayisi": 794,
+ "ilSayisi": 81,
+ "toplamKalanMWe": 625.1,
+ "doluTM": 346,
+ "oncekiToplamMWe": 833.59,
+ "oncekiDoluTM": 331,
+ "oncekiTMSayisi": 791,
+ "azalanTM": 183,
+ "artanTM": 41,
+ "tamamenDoluIl": [
+  "ARDAHAN",
+  "KIRIKKALE",
+  "YALOVA"
+ ],
+ "iller": [
+  {
+   "il": "ARDAHAN",
+   "tm": 2,
+   "dolu": 2,
+   "kalan": 0.0,
+   "doluOran": 1.0
+  },
+  {
+   "il": "KIRIKKALE",
+   "tm": 2,
+   "dolu": 2,
+   "kalan": 0.0,
+   "doluOran": 1.0
+  },
+  {
+   "il": "YALOVA",
+   "tm": 1,
+   "dolu": 1,
+   "kalan": 0.0,
+   "doluOran": 1.0
+  },
+  {
+   "il": "KAHRAMANMARAŞ",
+   "tm": 12,
+   "dolu": 11,
+   "kalan": 0.4,
+   "doluOran": 0.917
+  },
+  {
+   "il": "ISPARTA",
+   "tm": 7,
+   "dolu": 6,
+   "kalan": 1.23,
+   "doluOran": 0.857
+  },
+  {
+   "il": "UŞAK",
+   "tm": 6,
+   "dolu": 5,
+   "kalan": 2.0,
+   "doluOran": 0.833
+  },
+  {
+   "il": "MANİSA",
+   "tm": 16,
+   "dolu": 13,
+   "kalan": 7.25,
+   "doluOran": 0.812
+  },
+  {
+   "il": "BATMAN",
+   "tm": 5,
+   "dolu": 4,
+   "kalan": 2.04,
+   "doluOran": 0.8
+  },
+  {
+   "il": "NİĞDE",
+   "tm": 5,
+   "dolu": 4,
+   "kalan": 0.42,
+   "doluOran": 0.8
+  },
+  {
+   "il": "ADIYAMAN",
+   "tm": 8,
+   "dolu": 6,
+   "kalan": 4.3,
+   "doluOran": 0.75
+  },
+  {
+   "il": "AMASYA",
+   "tm": 4,
+   "dolu": 3,
+   "kalan": 3.0,
+   "doluOran": 0.75
+  },
+  {
+   "il": "KIRŞEHİR",
+   "tm": 4,
+   "dolu": 3,
+   "kalan": 0.52,
+   "doluOran": 0.75
+  },
+  {
+   "il": "NEVŞEHİR",
+   "tm": 4,
+   "dolu": 3,
+   "kalan": 1.0,
+   "doluOran": 0.75
+  },
+  {
+   "il": "KAYSERİ",
+   "tm": 15,
+   "dolu": 11,
+   "kalan": 2.34,
+   "doluOran": 0.733
+  },
+  {
+   "il": "BİLECİK",
+   "tm": 7,
+   "dolu": 5,
+   "kalan": 3.0,
+   "doluOran": 0.714
+  },
+  {
+   "il": "ÇORUM",
+   "tm": 7,
+   "dolu": 5,
+   "kalan": 2.43,
+   "doluOran": 0.714
+  },
+  {
+   "il": "VAN",
+   "tm": 6,
+   "dolu": 4,
+   "kalan": 3.84,
+   "doluOran": 0.667
+  },
+  {
+   "il": "TUNCELİ",
+   "tm": 3,
+   "dolu": 2,
+   "kalan": 1.0,
+   "doluOran": 0.667
+  },
+  {
+   "il": "KONYA",
+   "tm": 29,
+   "dolu": 19,
+   "kalan": 13.6,
+   "doluOran": 0.655
+  },
+  {
+   "il": "ŞANLIURFA",
+   "tm": 23,
+   "dolu": 15,
+   "kalan": 12.73,
+   "doluOran": 0.652
+  },
+  {
+   "il": "GAZİANTEP",
+   "tm": 14,
+   "dolu": 9,
+   "kalan": 18.05,
+   "doluOran": 0.643
+  },
+  {
+   "il": "ÇANAKKALE",
+   "tm": 11,
+   "dolu": 7,
+   "kalan": 6.36,
+   "doluOran": 0.636
+  },
+  {
+   "il": "ELAZIĞ",
+   "tm": 8,
+   "dolu": 5,
+   "kalan": 5.45,
+   "doluOran": 0.625
+  },
+  {
+   "il": "ESKİŞEHİR",
+   "tm": 8,
+   "dolu": 5,
+   "kalan": 6.0,
+   "doluOran": 0.625
+  },
+  {
+   "il": "AFYONKARAHİSAR",
+   "tm": 10,
+   "dolu": 6,
+   "kalan": 5.7,
+   "doluOran": 0.6
+  },
+  {
+   "il": "ŞIRNAK",
+   "tm": 5,
+   "dolu": 3,
+   "kalan": 2.03,
+   "doluOran": 0.6
+  },
+  {
+   "il": "DENİZLİ",
+   "tm": 12,
+   "dolu": 7,
+   "kalan": 2.35,
+   "doluOran": 0.583
+  },
+  {
+   "il": "BALIKESİR",
+   "tm": 14,
+   "dolu": 8,
+   "kalan": 3.63,
+   "doluOran": 0.571
+  },
+  {
+   "il": "ARTVİN",
+   "tm": 7,
+   "dolu": 4,
+   "kalan": 3.17,
+   "doluOran": 0.571
+  },
+  {
+   "il": "YOZGAT",
+   "tm": 7,
+   "dolu": 4,
+   "kalan": 8.02,
+   "doluOran": 0.571
+  },
+  {
+   "il": "ANTALYA",
+   "tm": 25,
+   "dolu": 14,
+   "kalan": 8.36,
+   "doluOran": 0.56
+  },
+  {
+   "il": "TEKİRDAĞ",
+   "tm": 13,
+   "dolu": 7,
+   "kalan": 5.65,
+   "doluOran": 0.538
+  },
+  {
+   "il": "ADANA",
+   "tm": 23,
+   "dolu": 12,
+   "kalan": 10.27,
+   "doluOran": 0.522
+  },
+  {
+   "il": "MERSİN",
+   "tm": 18,
+   "dolu": 9,
+   "kalan": 24.4,
+   "doluOran": 0.5
+  },
+  {
+   "il": "KIRKLARELİ",
+   "tm": 8,
+   "dolu": 4,
+   "kalan": 2.85,
+   "doluOran": 0.5
+  },
+  {
+   "il": "MALATYA",
+   "tm": 8,
+   "dolu": 4,
+   "kalan": 4.21,
+   "doluOran": 0.5
+  },
+  {
+   "il": "TOKAT",
+   "tm": 8,
+   "dolu": 4,
+   "kalan": 4.0,
+   "doluOran": 0.5
+  },
+  {
+   "il": "ÇANKIRI",
+   "tm": 6,
+   "dolu": 3,
+   "kalan": 3.02,
+   "doluOran": 0.5
+  },
+  {
+   "il": "OSMANİYE",
+   "tm": 6,
+   "dolu": 3,
+   "kalan": 1.9,
+   "doluOran": 0.5
+  },
+  {
+   "il": "BİNGÖL",
+   "tm": 4,
+   "dolu": 2,
+   "kalan": 1.52,
+   "doluOran": 0.5
+  },
+  {
+   "il": "BİTLİS",
+   "tm": 4,
+   "dolu": 2,
+   "kalan": 0.81,
+   "doluOran": 0.5
+  },
+  {
+   "il": "BOLU",
+   "tm": 4,
+   "dolu": 2,
+   "kalan": 2.55,
+   "doluOran": 0.5
+  },
+  {
+   "il": "BURDUR",
+   "tm": 4,
+   "dolu": 2,
+   "kalan": 10.0,
+   "doluOran": 0.5
+  },
+  {
+   "il": "KİLİS",
+   "tm": 2,
+   "dolu": 1,
+   "kalan": 0.66,
+   "doluOran": 0.5
+  },
+  {
+   "il": "ERZURUM",
+   "tm": 11,
+   "dolu": 5,
+   "kalan": 12.59,
+   "doluOran": 0.455
+  },
+  {
+   "il": "GİRESUN",
+   "tm": 9,
+   "dolu": 4,
+   "kalan": 9.16,
+   "doluOran": 0.444
+  },
+  {
+   "il": "SİVAS",
+   "tm": 9,
+   "dolu": 4,
+   "kalan": 4.2,
+   "doluOran": 0.444
+  },
+  {
+   "il": "TRABZON",
+   "tm": 9,
+   "dolu": 4,
+   "kalan": 5.72,
+   "doluOran": 0.444
+  },
+  {
+   "il": "MARDİN",
+   "tm": 10,
+   "dolu": 4,
+   "kalan": 4.23,
+   "doluOran": 0.4
+  },
+  {
+   "il": "AYDIN",
+   "tm": 11,
+   "dolu": 4,
+   "kalan": 10.27,
+   "doluOran": 0.364
+  },
+  {
+   "il": "KASTAMONU",
+   "tm": 9,
+   "dolu": 3,
+   "kalan": 4.87,
+   "doluOran": 0.333
+  },
+  {
+   "il": "KÜTAHYA",
+   "tm": 9,
+   "dolu": 3,
+   "kalan": 20.3,
+   "doluOran": 0.333
+  },
+  {
+   "il": "SAKARYA",
+   "tm": 9,
+   "dolu": 3,
+   "kalan": 7.54,
+   "doluOran": 0.333
+  },
+  {
+   "il": "AĞRI",
+   "tm": 6,
+   "dolu": 2,
+   "kalan": 5.92,
+   "doluOran": 0.333
+  },
+  {
+   "il": "RİZE",
+   "tm": 6,
+   "dolu": 2,
+   "kalan": 6.37,
+   "doluOran": 0.333
+  },
+  {
+   "il": "KARABÜK",
+   "tm": 3,
+   "dolu": 1,
+   "kalan": 6.3,
+   "doluOran": 0.333
+  },
+  {
+   "il": "MUŞ",
+   "tm": 3,
+   "dolu": 1,
+   "kalan": 4.85,
+   "doluOran": 0.333
+  },
+  {
+   "il": "KOCAELİ",
+   "tm": 13,
+   "dolu": 4,
+   "kalan": 20.0,
+   "doluOran": 0.308
+  },
+  {
+   "il": "BURSA",
+   "tm": 23,
+   "dolu": 7,
+   "kalan": 18.79,
+   "doluOran": 0.304
+  },
+  {
+   "il": "ANKARA",
+   "tm": 40,
+   "dolu": 11,
+   "kalan": 56.27,
+   "doluOran": 0.275
+  },
+  {
+   "il": "HATAY",
+   "tm": 12,
+   "dolu": 3,
+   "kalan": 9.4,
+   "doluOran": 0.25
+  },
+  {
+   "il": "AKSARAY",
+   "tm": 4,
+   "dolu": 1,
+   "kalan": 1.54,
+   "doluOran": 0.25
+  },
+  {
+   "il": "GÜMÜŞHANE",
+   "tm": 4,
+   "dolu": 1,
+   "kalan": 4.63,
+   "doluOran": 0.25
+  },
+  {
+   "il": "KARS",
+   "tm": 4,
+   "dolu": 1,
+   "kalan": 5.0,
+   "doluOran": 0.25
+  },
+  {
+   "il": "MUĞLA",
+   "tm": 13,
+   "dolu": 3,
+   "kalan": 8.23,
+   "doluOran": 0.231
+  },
+  {
+   "il": "DÜZCE",
+   "tm": 5,
+   "dolu": 1,
+   "kalan": 3.82,
+   "doluOran": 0.2
+  },
+  {
+   "il": "KARAMAN",
+   "tm": 5,
+   "dolu": 1,
+   "kalan": 31.92,
+   "doluOran": 0.2
+  },
+  {
+   "il": "DİYARBAKIR",
+   "tm": 11,
+   "dolu": 2,
+   "kalan": 11.19,
+   "doluOran": 0.182
+  },
+  {
+   "il": "İZMİR",
+   "tm": 47,
+   "dolu": 8,
+   "kalan": 40.02,
+   "doluOran": 0.17
+  },
+  {
+   "il": "SAMSUN",
+   "tm": 12,
+   "dolu": 2,
+   "kalan": 7.7,
+   "doluOran": 0.167
+  },
+  {
+   "il": "İSTANBUL",
+   "tm": 63,
+   "dolu": 9,
+   "kalan": 55.0,
+   "doluOran": 0.143
+  },
+  {
+   "il": "EDİRNE",
+   "tm": 7,
+   "dolu": 1,
+   "kalan": 6.31,
+   "doluOran": 0.143
+  },
+  {
+   "il": "ZONGULDAK",
+   "tm": 7,
+   "dolu": 0,
+   "kalan": 8.11,
+   "doluOran": 0.0
+  },
+  {
+   "il": "ORDU",
+   "tm": 6,
+   "dolu": 0,
+   "kalan": 7.11,
+   "doluOran": 0.0
+  },
+  {
+   "il": "ERZİNCAN",
+   "tm": 5,
+   "dolu": 0,
+   "kalan": 6.82,
+   "doluOran": 0.0
+  },
+  {
+   "il": "HAKKARİ",
+   "tm": 3,
+   "dolu": 0,
+   "kalan": 6.0,
+   "doluOran": 0.0
+  },
+  {
+   "il": "SİİRT",
+   "tm": 3,
+   "dolu": 0,
+   "kalan": 4.07,
+   "doluOran": 0.0
+  },
+  {
+   "il": "SİNOP",
+   "tm": 3,
+   "dolu": 0,
+   "kalan": 1.9,
+   "doluOran": 0.0
+  },
+  {
+   "il": "BARTIN",
+   "tm": 2,
+   "dolu": 0,
+   "kalan": 2.9,
+   "doluOran": 0.0
+  },
+  {
+   "il": "IĞDIR",
+   "tm": 2,
+   "dolu": 0,
+   "kalan": 2.0,
+   "doluOran": 0.0
+  },
+  {
+   "il": "BAYBURT",
+   "tm": 1,
+   "dolu": 0,
+   "kalan": 2.0,
+   "doluOran": 0.0
+  }
+ ],
+ "degisimMWe": -208.49,
+ "degisimYuzde": -25.0
+}
