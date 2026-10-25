@@ -2,6 +2,7 @@ import express from 'express';
 import { createServer as createViteServer } from 'vite';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { GoogleGenAI } from '@google/genai';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -38,26 +39,59 @@ function sablon(o: any): string {
 
 const duzelt = (s: string) => s.trim().replace(/\*\*/g, '').replace(/^#+\s*/gm, '');
 
-const CAGRI_MS = 10000;
+const apiKey = process.env.GEMINI_API_KEY || process.env.API_KEY || process.env.GOOGLE_API_KEY;
+const ai = new GoogleGenAI({
+  ...(apiKey ? { apiKey } : {}),
+  httpOptions: {
+    headers: {
+      'User-Agent': 'aistudio-build',
+    },
+  },
+});
 
-async function gemini(o: any, anahtar: string) {
-  const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`, {
-    method: 'POST',
-    signal: AbortSignal.timeout(CAGRI_MS),
-    headers: { 'Content-Type': 'application/json', 'x-goog-api-key': anahtar },
-    body: JSON.stringify({
-      systemInstruction: { parts: [{ text: TALIMAT }] },
-      contents: [{ role: 'user', parts: [{ text: JSON.stringify(o) }] }],
-      generationConfig: { temperature: 0.2, maxOutputTokens: 2048, thinkingConfig: { thinkingBudget: 0 } },
-    }),
-  });
-  const j: any = await r.json();
-  if (!r.ok) throw new Error(j?.error?.message || `Gemini ${r.status}`);
-  const aday = j.candidates?.[0];
-  const metin = duzelt((aday?.content?.parts ?? []).map((p: any) => p.text ?? '').join(''));
-  if (!metin) throw new Error('Gemini boş yanıt döndü');
-  if (aday?.finishReason && aday.finishReason !== 'STOP') throw new Error(`Yanıt tamamlanmadı (${aday.finishReason})`);
-  return { metin, kaynak: 'gemini', model: MODEL };
+const CAGRI_MS = 12000;
+
+async function gemini(o: any) {
+  const timeoutPromise = new Promise<never>((_, reject) =>
+    setTimeout(() => reject(new Error('timeout')), CAGRI_MS)
+  );
+
+  try {
+    const requestPromise = ai.models.generateContent({
+      model: MODEL,
+      contents: JSON.stringify(o),
+      config: {
+        systemInstruction: TALIMAT,
+        temperature: 0.2,
+        maxOutputTokens: 2048,
+      },
+    });
+
+    const resp = await Promise.race([requestPromise, timeoutPromise]);
+    const metin = duzelt(resp.text ?? '');
+    if (!metin) throw new Error('Gemini boş yanıt döndü');
+    return { metin, kaynak: 'gemini', model: MODEL };
+  } catch (sdkError) {
+    if (apiKey) {
+      const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`, {
+        method: 'POST',
+        signal: AbortSignal.timeout(CAGRI_MS),
+        headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
+        body: JSON.stringify({
+          systemInstruction: { parts: [{ text: TALIMAT }] },
+          contents: [{ role: 'user', parts: [{ text: JSON.stringify(o) }] }],
+          generationConfig: { temperature: 0.2, maxOutputTokens: 2048, thinkingConfig: { thinkingBudget: 0 } },
+        }),
+      });
+      const j: any = await r.json();
+      if (!r.ok) throw new Error(j?.error?.message || `Gemini ${r.status}`);
+      const aday = j.candidates?.[0];
+      const metin = duzelt((aday?.content?.parts ?? []).map((p: any) => p.text ?? '').join(''));
+      if (!metin) throw new Error('Gemini boş yanıt döndü');
+      return { metin, kaynak: 'gemini', model: MODEL };
+    }
+    throw sdkError;
+  }
 }
 
 app.post('/api/ozet', async (req, res) => {
@@ -66,26 +100,21 @@ app.post('/api/ozet', async (req, res) => {
     return res.status(400).json({ hata: 'Simülasyon özeti eksik' });
   }
 
-  const anahtar = process.env.GEMINI_API_KEY;
-  if (anahtar) {
-    try {
-      const resp = await gemini(o, anahtar);
-      return res.status(200).json(resp);
-    } catch (e) {
-      console.error('Gemini error:', (e as Error).message);
-      return res.status(200).json({
-        metin: sablon(o),
-        kaynak: 'sablon',
-        uyari: 'Gemini şu an yoğun veya ulaşılamadı; sayılar aynı, not şablonla yazıldı.',
-      });
-    }
+  try {
+    const resp = await gemini(o);
+    return res.status(200).json(resp);
+  } catch (e) {
+    console.error('Gemini error:', (e as Error).message);
+    const msg = (e as Error).message || '';
+    const uyari = /high demand|overloaded|unavailable|rate|quota|429|500|502|503|504|timeout|abort/i.test(msg)
+      ? 'Gemini şu an yoğun; sayılar aynı, not şablonla yazıldı. Birkaç saniye sonra tekrar deneyebilirsiniz'
+      : 'dil modeline ulaşılamadı; sayılar aynı, not şablonla yazıldı';
+    return res.status(200).json({
+      metin: sablon(o),
+      kaynak: 'sablon',
+      uyari,
+    });
   }
-
-  return res.status(200).json({
-    metin: sablon(o),
-    kaynak: 'sablon',
-    uyari: 'dil modeli anahtarı tanımlı değil; sayılar aynı, not şablonla yazıldı',
-  });
 });
 
 async function startServer() {

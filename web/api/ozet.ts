@@ -95,7 +95,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   BASLANGIC.t = Date.now();
 
   // Sağlayıcı sırası: SAGLAYICI=claude ile Claude öne alınır. Biri düşerse diğeri, o da yoksa şablon.
-  const g = process.env.GEMINI_API_KEY, c = process.env.ANTHROPIC_API_KEY;
+  const g = process.env.GEMINI_API_KEY || process.env.API_KEY || process.env.GOOGLE_API_KEY, c = process.env.ANTHROPIC_API_KEY;
   const sira: Array<() => Promise<{ metin: string; kaynak: string; model: string }>> = [];
   if (process.env.SAGLAYICI === "claude") {
     if (c) sira.push(() => claude(o, c));

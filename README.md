@@ -1,6 +1,6 @@
 # RoomForSun — Esnek Bağlantı Motoru
 
-> **Bu repo, projenin Google AI Studio sürümüdür.** Ana proje ve canlı araç: [github.com/HErenKlc/roomforsun](https://github.com/HErenKlc/roomforsun) · [roomforsun.vercel.app](https://roomforsun.vercel.app). AI Studio'da açmak için: [ai.studio/apps/2c1a9d31-ffa0-4cac-823a-fa5b36918101](https://ai.studio/apps/2c1a9d31-ffa0-4cac-823a-fa5b36918101)
+> **Bu repo, projenin Google AI Studio sürümüdür.** Ana proje ve canlı araç: [github.com/HErenKlc/roomforsun](https://github.com/HErenKlc/roomforsun) · [roomforsun.vercel.app](https://roomforsun.vercel.app). Yayındaki AI Studio uygulaması: [roomforsun.ai.studio](https://roomforsun.ai.studio)
 > Fark: `web/` altındaki uygulama kodu aynıdır; AI Studio'da çalışması için kökte `server.ts` (planlama notu uç noktası) ve `vite.config.ts` eklendi.
 
 **"Kapasite yok" denen trafo merkezine, kısıntı riskini bilerek ne kadar temiz enerji bağlanabilir?**
