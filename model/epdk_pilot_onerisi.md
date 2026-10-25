@@ -89,8 +89,8 @@ kaldığını göstermek. Ulusal bir karar ancak bundan sonra tartışılabilir.
 
 ## 6. Dayanak ve doğrulama
 
-Model ve kod açık: **github.com/HErenKlc/esnek-baglanti** ·
-canlı araç: **esnek-baglanti.vercel.app**
+Model ve kod açık: **github.com/HErenKlc/roomforsun** ·
+canlı araç: **roomforsun.vercel.app**
 
 | Ne | Kaynak | Doğrulama |
 |---|---|---|

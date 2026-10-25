@@ -26,7 +26,7 @@ UP School iş birliğiyle yürütülen Climathon 2026 kapsamında, lisanssız g�
 bağlantıyla ne kadar ek kapasite verilebileceğini modelleyen açık kaynaklı bir araç geliştirdim.
 
 Araç şu an TEİAŞ'ın yayımladığı kapasite tablosunu, Open-Meteo'nun 20 yıllık ışınım verisini
-ve EPİAŞ'ın ulusal saatlik tüketimini kullanıyor. Çalışan sürüm: esnek-baglanti.vercel.app
+ve EPİAŞ'ın ulusal saatlik tüketimini kullanıyor. Çalışan sürüm: roomforsun.vercel.app
 
 Hesaptaki tek varsayım, trafo merkezinin tepe yükü. Bu veri kamuya açık olmadığı için ulusal
 yük profilini ölçekliyorum. Sizden ricam, **Konya bölgesinden bir trafo merkezi için** şu

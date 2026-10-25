@@ -106,7 +106,7 @@ def getir(url, veri=None, deneme=3):
         try:
             istek = urllib.request.Request(
                 url, data=veri.encode() if veri else None,
-                headers={"User-Agent": "esnek-baglanti/1.0 (Climathon 2026; akademik)"})
+                headers={"User-Agent": "roomforsun/1.0 (Climathon 2026; akademik)"})
             with urllib.request.urlopen(istek, timeout=240) as y:
                 return json.loads(y.read().decode("utf-8"))
         except Exception as e:

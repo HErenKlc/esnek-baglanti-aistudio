@@ -33,6 +33,7 @@ button, input, select { font: inherit; color: inherit; }
   padding: 14px 28px; border-bottom: 1px solid var(--cizgi);
 }
 .ust h1 { margin: 0; font-size: 1.15rem; font-weight: 600; letter-spacing: 0.01em; }
+.ust h1 .alt-ad { font-weight: 400; opacity: 0.75; }
 .ust p { margin: 0; color: var(--murekkep-2); font-size: 0.92rem; }
 .ust .paylas { margin-left: auto; background: #fff; cursor: pointer; }
 .ust .rozet {

@@ -1,7 +1,7 @@
-# Flexible Connection Engine — English pitch
+# RoomForSun — Flexible Connection Engine · English pitch
 
 Climathon 2026 (Siemens × YGA × UP School) · Hüseyin Eren Kılıç, METU Environmental Engineering
-Live tool: **esnek-baglanti.vercel.app** · Code: **github.com/HErenKlc/esnek-baglanti**
+Live tool: **roomforsun.vercel.app** · Code: **github.com/HErenKlc/roomforsun**
 
 ---
 
@@ -41,8 +41,8 @@ been asked.
 ## One paragraph
 
 Grid connection capacity in Türkiye is allocated with a static rule that assumes
-peak generation and minimum load coincide at all times. The Flexible Connection
-Engine replaces that assumption with an hourly simulation over 20 years of real
+peak generation and minimum load coincide at all times. RoomForSun replaces
+that assumption with an hourly simulation over 20 years of real
 weather and 10 years of real demand, and reports how much additional solar can
 connect to a "full" substation under a curtailment agreement, together with the
 curtailment risk as a P50/P90 distribution. The headline figure is a

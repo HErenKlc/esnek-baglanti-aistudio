@@ -4,8 +4,8 @@ Yaklaşık 15 dakika. Gerekenler: GitHub hesabı, [Git](https://git-scm.com/down
 
 ## 1. GitHub deposu
 
-1. github.com/new → Repository name: `esnek-baglanti` → **Public** → README **ekleme** → Create repository.
-2. Paketi aç, terminali `esnek-baglanti` klasöründe başlat. Commit ve depo adresi (`https://github.com/HErenKlc/esnek-baglanti.git`) hazır; tek komut:
+1. github.com/new → Repository name: `roomforsun` → **Public** → README **ekleme** → Create repository.
+2. Paketi aç, terminali `roomforsun` klasöründe başlat. Commit ve depo adresi (`https://github.com/HErenKlc/roomforsun.git`) hazır; tek komut:
 
 ```bash
 git push -u origin main
@@ -25,10 +25,10 @@ npm run dev     # http://localhost:5173
 ## 3. Vercel
 
 1. vercel.com → **Sign up with GitHub** (aynı hesap).
-2. **Add New → Project** → `esnek-baglanti` → **Import**.
+2. **Add New → Project** → `roomforsun` → **Import**.
 3. **Root Directory: `web`** (önemli) → Framework otomatik "Vite" gelir.
 4. **Environment Variables** → `GEMINI_API_KEY` = Google AI Studio'dan alınan anahtar (aistudio.google.com → Get API key). Anahtarsız da çalışır; planlama notu şablon metinle çıkar.
-5. **Deploy**. Link `https://esnek-baglanti-....vercel.app` gibi olur.
+5. **Deploy**. Link `https://roomforsun-....vercel.app` gibi olur.
 
 Sonraki her `git push` otomatik yeniden yayınlar.
 

@@ -1,4 +1,4 @@
-"""Esnek Bağlantı Motoru · Yük kantil modeli (gerçek EPİAŞ verisi).
+"""RoomForSun — Esnek Bağlantı Motoru · Yük kantil modeli (gerçek EPİAŞ verisi).
 
 Veri: EPİAŞ Şeffaflık Platformu saatlik gerçek zamanlı tüketim. Bu klasördeki bütün epias_*.csv dosyaları
 birleştirilir: varsayılan 2022-2025; epias_cek.py ile 2016-2025'e genişler (kod değişmeden).

@@ -117,7 +117,7 @@ out ids;
 def sor(sorgu: str, ne: str) -> list:
     veri = urllib.parse.urlencode({"data": sorgu}).encode()
     istek = urllib.request.Request(OVERPASS, data=veri,
-                                   headers={"User-Agent": "esnek-baglanti/1.0 (akademik calisma)"})
+                                   headers={"User-Agent": "roomforsun/1.0 (akademik calisma)"})
     for deneme in range(3):
         try:
             with urllib.request.urlopen(istek, timeout=300) as r:

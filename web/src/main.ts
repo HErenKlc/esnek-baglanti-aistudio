@@ -161,7 +161,7 @@ let sonOzet: Record<string, unknown> | null = null;
 const app = document.getElementById("app")!;
 app.innerHTML = `
 <header class="ust">
-  <h1>Esnek Bağlantı Motoru</h1>
+  <h1>RoomForSun <span class="alt-ad">— Esnek Bağlantı Motoru</span></h1>
   <p>"Kapasite yok" denen trafo merkezine, kısıntı riskini bilerek ne kadar temiz enerji bağlanabilir?</p>
   <button class="rozet paylas" id="paylas">Senaryo linkini kopyala</button>
   <span class="rozet">Climathon 2026 · prototip</span>

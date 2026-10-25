@@ -1,4 +1,4 @@
-"""NASA POWER veri çekici (Climathon 2026 · Esnek Bağlantı Motoru).
+"""NASA POWER veri çekici (Climathon 2026 · RoomForSun — Esnek Bağlantı Motoru).
 
 Yağmur'un Build & Show demosundaki akışın kod hali: NASA POWER'dan
 ışınım + sıcaklık verisini çek, -999 eksik değerlerini NaN yap, CSV'ye yaz.

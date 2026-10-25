@@ -1,13 +1,13 @@
-# Esnek Bağlantı Motoru
+# RoomForSun — Esnek Bağlantı Motoru
 
-> **Bu repo, projenin Google AI Studio sürümüdür.** Ana proje ve canlı araç: [github.com/HErenKlc/esnek-baglanti](https://github.com/HErenKlc/esnek-baglanti) · [esnek-baglanti.vercel.app](https://esnek-baglanti.vercel.app). AI Studio'da açmak için: [ai.studio/apps/2c1a9d31-ffa0-4cac-823a-fa5b36918101](https://ai.studio/apps/2c1a9d31-ffa0-4cac-823a-fa5b36918101)
+> **Bu repo, projenin Google AI Studio sürümüdür.** Ana proje ve canlı araç: [github.com/HErenKlc/roomforsun](https://github.com/HErenKlc/roomforsun) · [roomforsun.vercel.app](https://roomforsun.vercel.app). AI Studio'da açmak için: [ai.studio/apps/2c1a9d31-ffa0-4cac-823a-fa5b36918101](https://ai.studio/apps/2c1a9d31-ffa0-4cac-823a-fa5b36918101)
 > Fark: `web/` altındaki uygulama kodu aynıdır; AI Studio'da çalışması için kökte `server.ts` (planlama notu uç noktası) ve `vite.config.ts` eklendi.
 
 **"Kapasite yok" denen trafo merkezine, kısıntı riskini bilerek ne kadar temiz enerji bağlanabilir?**
 
 Climathon 2026 (Siemens × YGA × UP School) · Hüseyin Eren Kılıç
 
-Canlı araç: **[esnek-baglanti.vercel.app](https://esnek-baglanti.vercel.app)**
+Canlı araç: **[roomforsun.vercel.app](https://roomforsun.vercel.app)**
 
 Türkiye'de 2024–2025'te 11,6 GW lisanssız GES/RES başvurusunun %65'i kapasite yok denerek reddedildi ([Ember](https://ember-energy.org/latest-insights/turkiye-can-bypass-grid-constraints-with-hybrid-solar-power-plants/grid-connection-capacity-challenges-in-turkiye-and/)). Kapasite, en kötü iki anın (tam üretim + en düşük yük) aynı anda olacağını varsayan statik bir kuralla hesaplanıyor. Bu araç, bir trafo merkezi için gerçek hava ve yük belirsizliğini saat saat simüle ederek esnek (kısılabilir) bağlantıyla kaç MW daha bağlanabileceğini ve bunun yıllık kısıntı bedelini (P50/P90) hesaplar.
 
@@ -30,7 +30,7 @@ Arayüz tek link, üç görünüm: **Karar** (EDAŞ planlama mühendisi ve yatı
 
 COP31'in hedeflerinden biri elektrifikasyonu 2035'e kadar %35'e çıkarmak; artışın büyük kısmının yenilenebilirden gelmesi bekleniyor. Türkiye'de bunun darboğazı panel fiyatı ya da arazi değil, şebeke bağlantısı: yatırım hazır, bağlantı izni yok. Bu araç, yeni trafo merkezi kurmadan (3–5 yıl ve yüksek maliyet) mevcut bakırla ne kadar yer açılabileceğini sayıya döker.
 
-Siemens'in Gridscale X ürün ailesi dağıtım şirketlerine şebekeyi işletirken esnekliği yönetme araçları sunuyor. Esnek Bağlantı Motoru bunun bir adım öncesinde duruyor: **planlama aşamasında**, bir bağlantı başvurusuna "hayır" yerine "şu kadar MW, şu kısıntı riskiyle" cevabını üretiyor. Yani işletme araçlarının ihtiyaç duyduğu bağlantı kararını veriye dayandırıyor. Çerçeve "veri var ama karar yok" boşluğu: TEİAŞ tablosu, hava ve tüketim verisi açık; bunları bağlantı kararına çeviren araç yok.
+Siemens'in Gridscale X ürün ailesi dağıtım şirketlerine şebekeyi işletirken esnekliği yönetme araçları sunuyor. RoomForSun bunun bir adım öncesinde duruyor: **planlama aşamasında**, bir bağlantı başvurusuna "hayır" yerine "şu kadar MW, şu kısıntı riskiyle" cevabını üretiyor. Yani işletme araçlarının ihtiyaç duyduğu bağlantı kararını veriye dayandırıyor. Çerçeve "veri var ama karar yok" boşluğu: TEİAŞ tablosu, hava ve tüketim verisi açık; bunları bağlantı kararına çeviren araç yok.
 
 ## Benzerleriyle kıyas
 

@@ -25,7 +25,7 @@ def al(yol: str, **parametre):
     url = f"{KOK}/{yol}"
     if parametre:
         url += "?" + urllib.parse.urlencode(parametre)
-    istek = urllib.request.Request(url, headers={"User-Agent": "esnek-baglanti/1.0"})
+    istek = urllib.request.Request(url, headers={"User-Agent": "roomforsun/1.0"})
     with urllib.request.urlopen(istek, timeout=60) as y:
         return json.loads(y.read().decode("utf-8"))
 
